@@ -11,6 +11,7 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
+    
     //test
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
@@ -19,6 +20,7 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
+            
             List {
                 ForEach(items) { item in
                     NavigationLink {
