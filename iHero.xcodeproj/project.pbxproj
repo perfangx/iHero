@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32694C222992440500B4AD49 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32694C212992440500B4AD49 /* Main.swift */; };
 		D4CF162029923BEA003922AD /* iHeroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF161F29923BEA003922AD /* iHeroApp.swift */; };
 		D4CF162229923BEA003922AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF162129923BEA003922AD /* ContentView.swift */; };
 		D4CF162429923BEB003922AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4CF162329923BEB003922AD /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32694C212992440500B4AD49 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		D4CF161C29923BEA003922AD /* iHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CF161F29923BEA003922AD /* iHeroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iHeroApp.swift; sourceTree = "<group>"; };
 		D4CF162129923BEA003922AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			children = (
 				D4CF161F29923BEA003922AD /* iHeroApp.swift */,
 				D4CF162129923BEA003922AD /* ContentView.swift */,
+				32694C212992440500B4AD49 /* Main.swift */,
 				D4CF162329923BEB003922AD /* Assets.xcassets */,
 				D4CF162829923BEB003922AD /* Persistence.swift */,
 				D4CF162A29923BEB003922AD /* iHero.xcdatamodeld */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32694C222992440500B4AD49 /* Main.swift in Sources */,
 				D4CF162929923BEB003922AD /* Persistence.swift in Sources */,
 				D4CF162C29923BEB003922AD /* iHero.xcdatamodeld in Sources */,
 				D4CF162229923BEA003922AD /* ContentView.swift in Sources */,
