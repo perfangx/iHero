@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4CC9FA129937A8E00B79B3C /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FA029937A8E00B79B3C /* Quiz.swift */; };
 		320379202993799800186CE8 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203791F2993799800186CE8 /* MainPage.swift */; };
 		D4CF162029923BEA003922AD /* iHeroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF161F29923BEA003922AD /* iHeroApp.swift */; };
 		D4CF162229923BEA003922AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF162129923BEA003922AD /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D4CC9FA029937A8E00B79B3C /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		3203791F2993799800186CE8 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		D4CF161C29923BEA003922AD /* iHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CF161F29923BEA003922AD /* iHeroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iHeroApp.swift; sourceTree = "<group>"; };
@@ -59,6 +61,8 @@
 			children = (
 				D4CF161F29923BEA003922AD /* iHeroApp.swift */,
 				D4CF162129923BEA003922AD /* ContentView.swift */,
+				D4CC9FA029937A8E00B79B3C /* Quiz.swift */,
+				D4CF162329923BEB003922AD /* Assets.xcassets */,
 				D4CF162829923BEB003922AD /* Persistence.swift */,
 				3203791F2993799800186CE8 /* MainPage.swift */,
 				D4CF162329923BEB003922AD /* Assets.xcassets */,
@@ -148,6 +152,7 @@
 			files = (
 				320379202993799800186CE8 /* MainPage.swift in Sources */,
 				D4CF162929923BEB003922AD /* Persistence.swift in Sources */,
+				D4CC9FA129937A8E00B79B3C /* Quiz.swift in Sources */,
 				D4CF162C29923BEB003922AD /* iHero.xcdatamodeld in Sources */,
 				D4CF162229923BEA003922AD /* ContentView.swift in Sources */,
 				D4CF162029923BEA003922AD /* iHeroApp.swift in Sources */,
