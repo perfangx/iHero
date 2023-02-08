@@ -15,7 +15,10 @@ struct Main: View {
                 Color("bgColor")
                     .ignoresSafeArea()
                 VStack{
-                    
+                    VStack{
+                        Text("Abnormal Sugar Levels")
+                            .foregroundColor(.white)
+                    }
                 }
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
