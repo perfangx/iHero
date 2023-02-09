@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D4CC9FA129937A8E00B79B3C /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FA029937A8E00B79B3C /* Quiz.swift */; };
 		320379202993799800186CE8 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203791F2993799800186CE8 /* MainPage.swift */; };
+		D4CC9FA129937A8E00B79B3C /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FA029937A8E00B79B3C /* Quiz.swift */; };
+		D4CC9FA42994D91A00B79B3C /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FA32994D91A00B79B3C /* QuizModel.swift */; };
+		D4CC9FA62994DC7300B79B3C /* QuizPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FA52994DC7300B79B3C /* QuizPage.swift */; };
+		D4CC9FA92994DDFD00B79B3C /* GameManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FA82994DDFD00B79B3C /* GameManagerVM.swift */; };
+		D4CC9FAC2994E74A00B79B3C /* reusableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FAB2994E74A00B79B3C /* reusableText.swift */; };
+		D4CC9FAE2994E7CB00B79B3C /* OptionsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FAD2994E7CB00B79B3C /* OptionsGridView.swift */; };
+		D4CC9FB02995142B00B79B3C /* QuizCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FAF2995142B00B79B3C /* QuizCompletedView.swift */; };
+		D4CC9FB3299530BB00B79B3C /* gameQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FB2299530BB00B79B3C /* gameQuestions.swift */; };
 		D4CF162029923BEA003922AD /* iHeroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF161F29923BEA003922AD /* iHeroApp.swift */; };
 		D4CF162229923BEA003922AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF162129923BEA003922AD /* ContentView.swift */; };
 		D4CF162429923BEB003922AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4CF162329923BEB003922AD /* Assets.xcassets */; };
@@ -18,8 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D4CC9FA029937A8E00B79B3C /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		3203791F2993799800186CE8 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		D4CC9FA029937A8E00B79B3C /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		D4CC9FA32994D91A00B79B3C /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		D4CC9FA52994DC7300B79B3C /* QuizPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPage.swift; sourceTree = "<group>"; };
+		D4CC9FA82994DDFD00B79B3C /* GameManagerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagerVM.swift; sourceTree = "<group>"; };
+		D4CC9FAB2994E74A00B79B3C /* reusableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reusableText.swift; sourceTree = "<group>"; };
+		D4CC9FAD2994E7CB00B79B3C /* OptionsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsGridView.swift; sourceTree = "<group>"; };
+		D4CC9FAF2995142B00B79B3C /* QuizCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCompletedView.swift; sourceTree = "<group>"; };
+		D4CC9FB2299530BB00B79B3C /* gameQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameQuestions.swift; sourceTree = "<group>"; };
 		D4CF161C29923BEA003922AD /* iHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CF161F29923BEA003922AD /* iHeroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iHeroApp.swift; sourceTree = "<group>"; };
 		D4CF162129923BEA003922AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +54,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4CC9FA22994D8FA00B79B3C /* models */ = {
+			isa = PBXGroup;
+			children = (
+				D4CC9FA32994D91A00B79B3C /* QuizModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		D4CC9FA72994DDD100B79B3C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D4CC9FA82994DDFD00B79B3C /* GameManagerVM.swift */,
+				D4CC9FB2299530BB00B79B3C /* gameQuestions.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D4CC9FAA2994E72800B79B3C /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				D4CC9FAB2994E74A00B79B3C /* reusableText.swift */,
+				D4CC9FAF2995142B00B79B3C /* QuizCompletedView.swift */,
+				D4CC9FAD2994E7CB00B79B3C /* OptionsGridView.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
 		D4CF161329923BEA003922AD = {
 			isa = PBXGroup;
 			children = (
@@ -62,9 +103,12 @@
 				D4CF161F29923BEA003922AD /* iHeroApp.swift */,
 				D4CF162129923BEA003922AD /* ContentView.swift */,
 				D4CC9FA029937A8E00B79B3C /* Quiz.swift */,
-				D4CF162329923BEB003922AD /* Assets.xcassets */,
-				D4CF162829923BEB003922AD /* Persistence.swift */,
+				D4CC9FA52994DC7300B79B3C /* QuizPage.swift */,
+				D4CC9FAA2994E72800B79B3C /* UIComponents */,
+				D4CC9FA72994DDD100B79B3C /* ViewModels */,
+				D4CC9FA22994D8FA00B79B3C /* models */,
 				3203791F2993799800186CE8 /* MainPage.swift */,
+				D4CF162829923BEB003922AD /* Persistence.swift */,
 				D4CF162329923BEB003922AD /* Assets.xcassets */,
 				D4CF162A29923BEB003922AD /* iHero.xcdatamodeld */,
 				D4CF162529923BEB003922AD /* Preview Content */,
@@ -153,9 +197,16 @@
 				320379202993799800186CE8 /* MainPage.swift in Sources */,
 				D4CF162929923BEB003922AD /* Persistence.swift in Sources */,
 				D4CC9FA129937A8E00B79B3C /* Quiz.swift in Sources */,
+				D4CC9FB3299530BB00B79B3C /* gameQuestions.swift in Sources */,
+				D4CC9FA92994DDFD00B79B3C /* GameManagerVM.swift in Sources */,
 				D4CF162C29923BEB003922AD /* iHero.xcdatamodeld in Sources */,
+				D4CC9FAC2994E74A00B79B3C /* reusableText.swift in Sources */,
 				D4CF162229923BEA003922AD /* ContentView.swift in Sources */,
+				D4CC9FA42994D91A00B79B3C /* QuizModel.swift in Sources */,
 				D4CF162029923BEA003922AD /* iHeroApp.swift in Sources */,
+				D4CC9FA62994DC7300B79B3C /* QuizPage.swift in Sources */,
+				D4CC9FAE2994E7CB00B79B3C /* OptionsGridView.swift in Sources */,
+				D4CC9FB02995142B00B79B3C /* QuizCompletedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
