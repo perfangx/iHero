@@ -13,7 +13,7 @@ struct iHeroApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            referencePage()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
