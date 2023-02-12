@@ -26,8 +26,8 @@ struct QuizPage: View {
                     //**** CONTENT *******
                     VStack{
                         // TITLE AND QUESTION
-                        reusableText(title: "Abnormal Sugar Levels", QuizQuestion: gameManagerVM.model.quizModel.question )
-                        
+                        reusableText(title: gameManagerVM.model.quizModel.quizTitle, QuizQuestion: gameManagerVM.model.quizModel.question, progressPrecent: gameManagerVM.progressPrecent )
+                        //Q OPTIONS
                         OptionGridView(gameManagerVM: gameManagerVM)
                         Spacer()
                         

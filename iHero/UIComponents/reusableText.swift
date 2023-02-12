@@ -11,6 +11,9 @@ import SwiftUI
 struct reusableText: View {
     var title: String
     var QuizQuestion: String
+    var progressPrecent: CGFloat
+    var width: CGFloat = 300
+    var height: CGFloat = 20
   //  var size: Int
     var body: some View {
         VStack{
@@ -21,10 +24,17 @@ struct reusableText: View {
                 .padding()
             
             // PROGRESS BAR
-            Rectangle()
-                .frame(width: 300,height: 20)
-                .cornerRadius(20)
-                .padding(.bottom)
+            ZStack(alignment: .leading){
+                RoundedRectangle(cornerRadius: 20,style: .continuous)
+                    .frame(width: width,height: height)
+                    .foregroundColor(Color("secBGColor"))
+                
+                RoundedRectangle(cornerRadius: 20,style: .continuous)
+                    .frame(width: progressPrecent ,height: height)
+                    .foregroundColor(Color("secondaryColor"))
+                    .animation(.linear)
+            }
+                .padding()
             
             //Q IMAGE
             Rectangle()
