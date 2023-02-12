@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		320379202993799800186CE8 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203791F2993799800186CE8 /* MainPage.swift */; };
+		D48DB7892998ED2200B0ED60 /* referencePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DB7882998ED2200B0ED60 /* referencePage.swift */; };
 		D4CC9FA129937A8E00B79B3C /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FA029937A8E00B79B3C /* Quiz.swift */; };
 		D4CC9FA42994D91A00B79B3C /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FA32994D91A00B79B3C /* QuizModel.swift */; };
 		D4CC9FA62994DC7300B79B3C /* QuizPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FA52994DC7300B79B3C /* QuizPage.swift */; };
@@ -22,11 +23,11 @@
 		D4CF162729923BEB003922AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4CF162629923BEB003922AD /* Preview Assets.xcassets */; };
 		D4CF162929923BEB003922AD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF162829923BEB003922AD /* Persistence.swift */; };
 		D4CF162C29923BEB003922AD /* iHero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4CF162A29923BEB003922AD /* iHero.xcdatamodeld */; };
-		E09DFA1C29937CBF00C376D2 /* referencePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09DFA1B29937CBF00C376D2 /* referencePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3203791F2993799800186CE8 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		D48DB7882998ED2200B0ED60 /* referencePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = referencePage.swift; sourceTree = "<group>"; };
 		D4CC9FA029937A8E00B79B3C /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		D4CC9FA32994D91A00B79B3C /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 		D4CC9FA52994DC7300B79B3C /* QuizPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPage.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		D4CF162629923BEB003922AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D4CF162829923BEB003922AD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D4CF162B29923BEB003922AD /* iHero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iHero.xcdatamodel; sourceTree = "<group>"; };
-		E09DFA1B29937CBF00C376D2 /* referencePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = referencePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,6 @@
 		D4CF161329923BEA003922AD = {
 			isa = PBXGroup;
 			children = (
-				E09DFA1B29937CBF00C376D2 /* referencePage.swift */,
 				D4CF161E29923BEA003922AD /* iHero */,
 				D4CF161D29923BEA003922AD /* Products */,
 			);
@@ -106,6 +105,7 @@
 				D4CF161F29923BEA003922AD /* iHeroApp.swift */,
 				D4CF162129923BEA003922AD /* ContentView.swift */,
 				D4CC9FA029937A8E00B79B3C /* Quiz.swift */,
+				D48DB7882998ED2200B0ED60 /* referencePage.swift */,
 				D4CC9FA52994DC7300B79B3C /* QuizPage.swift */,
 				D4CC9FAA2994E72800B79B3C /* UIComponents */,
 				D4CC9FA72994DDD100B79B3C /* ViewModels */,
@@ -201,8 +201,8 @@
 				D4CF162929923BEB003922AD /* Persistence.swift in Sources */,
 				D4CC9FA129937A8E00B79B3C /* Quiz.swift in Sources */,
 				D4CC9FB3299530BB00B79B3C /* gameQuestions.swift in Sources */,
+				D48DB7892998ED2200B0ED60 /* referencePage.swift in Sources */,
 				D4CC9FA92994DDFD00B79B3C /* GameManagerVM.swift in Sources */,
-				E09DFA1C29937CBF00C376D2 /* referencePage.swift in Sources */,
 				D4CF162C29923BEB003922AD /* iHero.xcdatamodeld in Sources */,
 				D4CC9FAC2994E74A00B79B3C /* reusableText.swift in Sources */,
 				D4CF162229923BEA003922AD /* ContentView.swift in Sources */,
