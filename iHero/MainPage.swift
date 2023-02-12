@@ -14,9 +14,11 @@ struct Main: View {
     @State var divTopic1 : String = "Abnormal Sugar Levels"
     @State var numOfLevels1 : Int = 4
     @State var color1 : String = "secondaryColor"
+    
     @State var divTopic2 : String = "Chocking"
     @State var numOfLevels2 : Int = 3
     @State var color2 : String = "lightGreen"
+    
     @State var divTopic3 : String = "External Bleeding"
     @State var numOfLevels3 : Int = 5
     @State var color3 : String = "darkGreen"
@@ -66,6 +68,8 @@ struct Main: View {
     
 }
 
+
+//MARK: each topic & levels
 struct div : View{
     
     @Binding var theDivTopic : String
@@ -90,6 +94,7 @@ struct div : View{
 
 
 
+//MARK: levels content and circles
 struct level :View{
     
     @Binding var count : Int
@@ -104,6 +109,7 @@ struct level :View{
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .background(Button{
+                            
                             isLocked.toggle()
                         }label: {
                             Circle()
