@@ -11,17 +11,7 @@ struct Main: View {
     
     @State var hitPoints : Int = 3
     
-    @State var divTopic1 : String = "Abnormal Sugar Levels"
-    @State var numOfLevels1 : Int = 4
-    @State var color1 : String = "secondaryColor"
-    
-    @State var divTopic2 : String = "Chocking"
-    @State var numOfLevels2 : Int = 3
-    @State var color2 : String = "lightGreen"
-    
-    @State var divTopic3 : String = "External Bleeding"
-    @State var numOfLevels3 : Int = 5
-    @State var color3 : String = "darkGreen"
+    @ObservedObject var gameVM : GameManagerVM
     
     var body: some View {
         NavigationView {
@@ -30,9 +20,10 @@ struct Main: View {
                     .ignoresSafeArea()
                 ScrollView{
                     VStack{
-                        div(theDivTopic: $divTopic1, theNumOfLevels: $numOfLevels1, theColor: $color1)
-                        div(theDivTopic: $divTopic2, theNumOfLevels: $numOfLevels2, theColor: $color2)
-                        div(theDivTopic: $divTopic3, theNumOfLevels: $numOfLevels3, theColor: $color3)
+                        ForEach(0..<gameVM.theGame.count){ ii in
+                            div(theDivTopic: gameVM.theGame[ii].topic, theNumOfLevels: gameVM.theGame[ii].levels.count, theColor: gameVM.theGame[ii].color)
+                               
+                        }
                     }
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
@@ -72,9 +63,9 @@ struct Main: View {
 //MARK: each topic & levels
 struct div : View{
     
-    @Binding var theDivTopic : String
-    @Binding var theNumOfLevels : Int
-    @Binding var theColor : String
+    @State var theDivTopic : String
+    @State var theNumOfLevels : Int
+    @State var theColor : String
     
     var body: some View{
         VStack{
@@ -85,7 +76,7 @@ struct div : View{
                 .frame(maxWidth: .infinity, maxHeight: 55,alignment: .leading)
                 .padding(10)
                 .background(Color("secBGColor"))
-            level(count: $theNumOfLevels, levelColor: $theColor)
+            level(count: theNumOfLevels, levelColor: theColor)
             
         }
     }
@@ -97,20 +88,18 @@ struct div : View{
 //MARK: levels content and circles
 struct level :View{
     
-    @Binding var count : Int
-    @Binding var levelColor : String
-    @State var isLocked : Bool = false
+    @State var count : Int
+    @State var levelColor : String
     
     var body: some View {
         VStack{
-            ForEach(1..<count+1){ i in
+            ForEach(1..<count+1, id: \.self){ i in
                 if isEven(myInt: i){
                     Text("\(i)")
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .background(Button{
-                            
-                            isLocked.toggle()
+//                            NavigationLink(destination: ContentView())
                         }label: {
                             Circle()
                                 .fill(Color(levelColor))
@@ -118,7 +107,7 @@ struct level :View{
                                 .overlay(
                                     Circle()
                                         .fill(Color(.black))
-                                        .opacity(isLocked ? 0.5 : 0)
+                                        .opacity(0)
                                 )
                         })
                         .padding(.leading, 60)
@@ -136,11 +125,11 @@ struct level :View{
                             Circle()
                                 .fill(Color(levelColor))
                                 .frame(width: 100, height: 55)
-//                                .overlay(
-//                                    Circle()
-//                                        .fill(Color(.black))
-//                                        .opacity(0.5)
-//                                )
+                                .overlay(
+                                    Circle()
+                                        .fill(Color(.black))
+                                        .opacity(0)
+                                )
                         })
                         .padding(.trailing, 60)
                     if(i != count){
@@ -176,7 +165,7 @@ func isEven(myInt: Int) -> Bool {
 
 struct Main_Previews: PreviewProvider {
     static var previews: some View {
-        Main()
+        Main( gameVM: GameManagerVM())
     }
 }
 
