@@ -15,14 +15,19 @@ class GameManagerVM : ObservableObject {
     static var levelStartIndex = 0
     static var levelQ = 0
     static var currentIndex = 0
-    //Creating new game model
-    static func createGameModel(i:Int) -> Quizz {
-        return Quizz(currentQuestionIndex: i, quizModel: quizData[i])
-    }
     
     @Published var model = GameManagerVM.createGameModel(i: GameManagerVM.currentIndex)
     @Published var hitPoints : Int = 3
     @Published var progressPrecent : CGFloat = 0
+    
+    @Published var theGame = GameData
+    
+    //Creating new game model
+    static func createGameModel(i:Int) -> Quizz {
+        return Quizz(levelId: UUID(), currentQuestionIndex: i, quizModel: quizData[i])
+    }
+    
+   
  
     
 

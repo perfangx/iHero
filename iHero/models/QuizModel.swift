@@ -8,13 +8,18 @@
 import Foundation
 import SwiftUI
 
+//each level
 struct Quizz {
-    var currentQuestionIndex: Int
+    var levelId: UUID
+    var currentQuestionIndex: Int //id
     var quizModel: QuizModel
     var quizCompleted: Bool = false
     var quizWinningStatus: Bool = false
+    var isLocked : Bool = true //all levels will be locked
+    
 }
 
+//each question
 struct QuizModel {
     var quizTitle: String
     var question: String
@@ -22,6 +27,7 @@ struct QuizModel {
     var optionList: [QuizOption]
 }
 
+//each option in question
 struct QuizOption: Identifiable {
     var id: Int
     var optionId: String

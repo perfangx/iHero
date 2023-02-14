@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		320379202993799800186CE8 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203791F2993799800186CE8 /* MainPage.swift */; };
+		32449AAD299B697D00C22873 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32449AAC299B697D00C22873 /* GameModel.swift */; };
+		32449AAF299B6DF600C22873 /* GameTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32449AAE299B6DF600C22873 /* GameTopics.swift */; };
 		D48DB7892998ED2200B0ED60 /* referencePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DB7882998ED2200B0ED60 /* referencePage.swift */; };
 		D4CC9FA42994D91A00B79B3C /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FA32994D91A00B79B3C /* QuizModel.swift */; };
 		D4CC9FA62994DC7300B79B3C /* QuizPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FA52994DC7300B79B3C /* QuizPage.swift */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		3203791F2993799800186CE8 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		32449AAC299B697D00C22873 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		32449AAE299B6DF600C22873 /* GameTopics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTopics.swift; sourceTree = "<group>"; };
 		D48DB7882998ED2200B0ED60 /* referencePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = referencePage.swift; sourceTree = "<group>"; };
 		D4CC9FA32994D91A00B79B3C /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 		D4CC9FA52994DC7300B79B3C /* QuizPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPage.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				D4CC9FA32994D91A00B79B3C /* QuizModel.swift */,
+				32449AAC299B697D00C22873 /* GameModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -67,6 +72,7 @@
 			children = (
 				D4CC9FA82994DDFD00B79B3C /* GameManagerVM.swift */,
 				D4CC9FB2299530BB00B79B3C /* gameQuestions.swift */,
+				32449AAE299B6DF600C22873 /* GameTopics.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -194,11 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32449AAF299B6DF600C22873 /* GameTopics.swift in Sources */,
 				320379202993799800186CE8 /* MainPage.swift in Sources */,
 				D4CF162929923BEB003922AD /* Persistence.swift in Sources */,
 				D4CC9FB3299530BB00B79B3C /* gameQuestions.swift in Sources */,
 				D48DB7892998ED2200B0ED60 /* referencePage.swift in Sources */,
 				D4CC9FA92994DDFD00B79B3C /* GameManagerVM.swift in Sources */,
+				32449AAD299B697D00C22873 /* GameModel.swift in Sources */,
 				D4CF162C29923BEB003922AD /* iHero.xcdatamodeld in Sources */,
 				D4CC9FAC2994E74A00B79B3C /* reusableText.swift in Sources */,
 				D4CF162229923BEA003922AD /* ContentView.swift in Sources */,
