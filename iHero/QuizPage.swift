@@ -30,7 +30,7 @@ struct QuizPage: View {
                     //**** CONTENT *******
                     VStack{
                       //  Text(QuizPageTopic)
-                        Text("\(currentLevel)")
+                     //   Text("\(currentLevel)")
                         // TITLE AND QUESTION
                         reusableText(title: gameManagerVM.model.quizModel.quizTitle, QuizQuestion: gameManagerVM.model.quizModel.question, progressPrecent: gameManagerVM.progressPrecent )
                         //Q OPTIONS
@@ -46,9 +46,14 @@ struct QuizPage: View {
             ToolbarItem(placement: .principal) {
                 HStack{
                     //X BUTTON
-                    Button{} label: {
-                        Image(systemName: "xmark.circle")
-                            .foregroundColor(.white)
+                    Button{
+                        gameManagerVM.restartGame()
+                    } label: {
+                        NavigationLink(destination:
+                                        Main(gameVM: GameManagerVM())
+                                       , label: { Image(systemName: "xmark.circle")
+                            .foregroundColor(.white)})
+                       
                     }
                   
                     Spacer()
@@ -65,10 +70,60 @@ struct QuizPage: View {
      
             
         }
+        .navigationBarBackButtonHidden(true)
         .onAppear{
-            GameManagerVM.levelStartIndex = currentLevel
-            print(GameManagerVM.currentIndex)
-           // Text("\(GameManagerVM.currentIndex)")
+            switch QuizPageTopic{
+            case "Abnormal Sugar Levels" : do {
+                switch currentLevel {
+                case  1: do {
+                    gameManagerVM.model=GameManagerVM.createGameModel(i: GameManagerVM.currentIndex)
+                }
+                case  2: do {
+                    gameManagerVM.model=GameManagerVM.createGameModel(i: GameManagerVM.currentIndex+3)
+                }
+                case  3: do {
+                    gameManagerVM.model=GameManagerVM.createGameModel(i: GameManagerVM.currentIndex+6)
+                }
+                case  4: do {
+                    gameManagerVM.model=GameManagerVM.createGameModel(i: GameManagerVM.currentIndex+9)
+                }
+                default: break
+                    
+                }
+            }
+            case "Chocking" : do {
+                switch currentLevel {
+                case  1: do {
+                    gameManagerVM.model=GameManagerVM.createGameModel(i: GameManagerVM.currentIndex+12)
+                }
+                case  2: do {
+                    gameManagerVM.model=GameManagerVM.createGameModel(i: GameManagerVM.currentIndex+15)
+                }
+                case  3: do {
+                    gameManagerVM.model=GameManagerVM.createGameModel(i: GameManagerVM.currentIndex+18)
+                }
+                case  4: do {
+                    gameManagerVM.model=GameManagerVM.createGameModel(i: GameManagerVM.currentIndex+21)
+                }
+                default: break
+                    
+                }
+            }
+
+              
+            default:
+                break
+            }
+//            if(currentLevel == 1){
+//              //  GameManagerVM.currentIndex = currentLevel
+//                gameManagerVM.model=GameManagerVM.createGameModel(i: GameManagerVM.currentIndex)
+//                print(GameManagerVM.currentIndex)
+//                // Text("\(GameManagerVM.currentIndex)")
+//            }
+//            else {
+//                GameManagerVM.currentIndex = GameManagerVM.currentIndex+3
+//                gameManagerVM.model=GameManagerVM.createGameModel(i: GameManagerVM.currentIndex)
+//            }
         }
         
     }

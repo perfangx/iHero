@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Main: View {
     
-    @State var hitPoints : Int = 3
+  //  @State var hitPoints : Int = 3
     
     @ObservedObject var gameVM : GameManagerVM
     
@@ -42,7 +42,7 @@ struct Main: View {
                                 HStack{
                                     Image(systemName: "heart.fill")
                                         .foregroundColor(/*@START_MENU_TOKEN@*/Color("darkRed")/*@END_MENU_TOKEN@*/)
-                                    Text("\(hitPoints)")
+                                    Text("\(gameVM.hitPoints)")
                                         .foregroundColor(.white)
                                 }
                                 
@@ -55,6 +55,7 @@ struct Main: View {
                 .toolbarBackground(Color("bgColor"),for: .navigationBar)
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
     
 }
@@ -101,7 +102,7 @@ struct level :View{
                         .foregroundColor(.white)
                         .background(
                             NavigationLink(destination:
-                                            QuizPage(gameManagerVM: GameManagerVM(),currentLevel: i)
+                                            QuizPage(gameManagerVM: GameManagerVM(),currentLevel: i,QuizPageTopic:divTopic)
                                            , label: {
                                                Circle()
                                                    .fill(Color(levelColor))
@@ -126,7 +127,7 @@ struct level :View{
                         .foregroundColor( .white )
                         .background(
                             NavigationLink(destination:
-                                QuizPage(gameManagerVM: GameManagerVM(),currentLevel: i)
+                                QuizPage(gameManagerVM: GameManagerVM(),currentLevel: i,QuizPageTopic:divTopic)
                                , label: {
                                    Circle()
                                        .fill(Color(levelColor))
