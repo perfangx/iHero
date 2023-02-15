@@ -15,7 +15,7 @@ class GameManagerVM : ObservableObject {
     static var levelStartIndex = 0
     static var levelQ = 0
     static var currentIndex = 0
-    
+   
     @Published var model = GameManagerVM.createGameModel(i: GameManagerVM.currentIndex)
     @Published var hitPoints : Int = 3
     @Published var progressPrecent : CGFloat = 0

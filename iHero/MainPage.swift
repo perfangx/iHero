@@ -22,7 +22,7 @@ struct Main: View {
                     VStack{
                         ForEach(0..<gameVM.theGame.count){ ii in
                             div(theDivTopic: gameVM.theGame[ii].topic, theNumOfLevels: gameVM.theGame[ii].levels.count, theColor: gameVM.theGame[ii].color)
-                               
+                            
                         }
                     }
                     .navigationBarTitleDisplayMode(.inline)
@@ -98,18 +98,20 @@ struct level :View{
                     Text("\(i)")
                         .fontWeight(.bold)
                         .foregroundColor(.white)
-                        .background(Button{
-//                            NavigationLink(destination: ContentView())
-                        }label: {
-                            Circle()
-                                .fill(Color(levelColor))
-                                .frame(width: 100, height: 55)
-                                .overlay(
-                                    Circle()
-                                        .fill(Color(.black))
-                                        .opacity(0)
-                                )
-                        })
+                        .background(
+                            NavigationLink(destination:
+                                            QuizPage(gameManagerVM: GameManagerVM())
+                                           , label: {
+                                               Circle()
+                                                   .fill(Color(levelColor))
+                                                   .frame(width: 100, height: 55)
+                                                   .overlay(
+                                                    Circle()
+                                                        .fill(Color(.black))
+                                                        .opacity(0)
+                                                   )
+                                               
+                                           }))
                         .padding(.leading, 60)
                     if(i != count){
                         Image(levelColor+"Line")
@@ -120,17 +122,19 @@ struct level :View{
                     Text("\(i)")
                         .fontWeight(.bold)
                         .foregroundColor( .white )
-                        .background(Button{
-                        }label: {
-                            Circle()
-                                .fill(Color(levelColor))
-                                .frame(width: 100, height: 55)
-                                .overlay(
-                                    Circle()
-                                        .fill(Color(.black))
-                                        .opacity(0)
-                                )
-                        })
+                        .background(
+                            NavigationLink(destination:
+                                QuizPage(gameManagerVM: GameManagerVM())
+                               , label: {
+                                   Circle()
+                                       .fill(Color(levelColor))
+                                       .frame(width: 100, height: 55)
+                                       .overlay(
+                                        Circle()
+                                            .fill(Color(.black))
+                                            .opacity(0)
+                                       )
+                                           }))
                         .padding(.trailing, 60)
                     if(i != count){
                         Image(levelColor+"Line")
