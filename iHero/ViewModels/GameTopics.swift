@@ -11,7 +11,8 @@ extension GameManagerVM
     static var GameData: [gameModel] {
        [
         gameModel(topic: "Abnormal Sugar Levels", color: "secondaryColor"),
-        gameModel(topic: "Chocking", color: "lightGreen")
+        gameModel(topic: "CPR", color: "lightGreen"),
+        gameModel(topic: "Burns", color: "darkGreen"),
 //        ,gameModel(topic: "External Bleeding", color: "darkGreen")
         ]
         
