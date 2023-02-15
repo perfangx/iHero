@@ -21,8 +21,8 @@ struct Main: View {
                 ScrollView{
                     VStack{
                         ForEach(0..<gameVM.theGame.count){ ii in
-                            div(theDivTopic: gameVM.theGame[ii].topic, theNumOfLevels: gameVM.theGame[ii].levels.count, theColor: gameVM.theGame[ii].color)
-                               
+                            div(theDivTopic: gameVM.theGame[ii].topic, theNumOfLevels: gameVM.theGame[ii].levels, theColor: gameVM.theGame[ii].color)
+                            
                         }
                     }
                     .navigationBarTitleDisplayMode(.inline)
@@ -76,7 +76,7 @@ struct div : View{
                 .frame(maxWidth: .infinity, maxHeight: 55,alignment: .leading)
                 .padding(10)
                 .background(Color("secBGColor"))
-            level(count: theNumOfLevels, levelColor: theColor)
+            level(count: theNumOfLevels, levelColor: theColor, divTopic: theDivTopic )
             
         }
     }
@@ -90,6 +90,7 @@ struct level :View{
     
     @State var count : Int
     @State var levelColor : String
+    @State var divTopic : String
     
     var body: some View {
         VStack{
@@ -98,39 +99,44 @@ struct level :View{
                     Text("\(i)")
                         .fontWeight(.bold)
                         .foregroundColor(.white)
-                        .background(Button{
-//                            NavigationLink(destination: ContentView())
-                        }label: {
-                            Circle()
-                                .fill(Color(levelColor))
-                                .frame(width: 100, height: 55)
-                                .overlay(
-                                    Circle()
-                                        .fill(Color(.black))
-                                        .opacity(0)
-                                )
-                        })
+                        .background(
+                            NavigationLink(destination:
+                                            QuizPage(gameManagerVM: GameManagerVM(),currentLevel: i)
+                                           , label: {
+                                               Circle()
+                                                   .fill(Color(levelColor))
+                                                   .frame(width: 100, height: 55)
+                                                   .overlay(
+                                                    Circle()
+                                                        .fill(Color(.black))
+                                                        .opacity(0)
+                                                   )
+                                               
+                                           }))
                         .padding(.leading, 60)
                     if(i != count){
                         Image(levelColor+"Line")
                             .padding(4)
                     }
-                    
+                  
+                
                 } else if !isEven(myInt: i) {
                     Text("\(i)")
                         .fontWeight(.bold)
                         .foregroundColor( .white )
-                        .background(Button{
-                        }label: {
-                            Circle()
-                                .fill(Color(levelColor))
-                                .frame(width: 100, height: 55)
-                                .overlay(
-                                    Circle()
-                                        .fill(Color(.black))
-                                        .opacity(0)
-                                )
-                        })
+                        .background(
+                            NavigationLink(destination:
+                                QuizPage(gameManagerVM: GameManagerVM(),currentLevel: i)
+                               , label: {
+                                   Circle()
+                                       .fill(Color(levelColor))
+                                       .frame(width: 100, height: 55)
+                                       .overlay(
+                                        Circle()
+                                            .fill(Color(.black))
+                                            .opacity(0)
+                                       )
+                                           }))
                         .padding(.trailing, 60)
                     if(i != count){
                         Image(levelColor+"Line")

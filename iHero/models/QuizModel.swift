@@ -22,6 +22,7 @@ struct Quizz {
 //each question
 struct QuizModel {
     var quizTitle: String
+    var quizLevelNum : Int
     var question: String
     var answer: String
     var optionList: [QuizOption]
@@ -29,10 +30,9 @@ struct QuizModel {
 
 //each option in question
 struct QuizOption: Identifiable {
-    var id: Int
+    var id: Int// turn it to UUID
     var optionId: String
     var option: String
-    var color: Color
     var isSelected: Bool = false
     var isMatched: Bool = false
 }

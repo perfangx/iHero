@@ -11,5 +11,6 @@ import SwiftUI
 struct gameModel{
     var topic : String
     var color : String
-    var levels : [Quizz] //it is a list which is shown in GameTopics
+    var levels : Int = 4
+//    var levels : [Quizz] //it is a list which is shown in GameTopics
 }
