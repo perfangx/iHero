@@ -15,14 +15,22 @@ class GameManagerVM : ObservableObject {
     static var levelStartIndex = 0
     static var levelQ = 0
     static var currentIndex = 0
-    //Creating new game model
-    static func createGameModel(i:Int) -> Quizz {
-        return Quizz(currentQuestionIndex: i, quizModel: quizData[i])
-    }
     
-    @Published var model = GameManagerVM.createGameModel(i: GameManagerVM.currentIndex)
+    @Published var model = GameManagerVM.createGameModel(i: GameManagerVM.levelStartIndex)
     @Published var hitPoints : Int = 3
     @Published var progressPrecent : CGFloat = 0
+    
+    @Published var theGame = GameData
+    
+    //Creating new game model
+    static func createGameModel(i:Int) -> Quizz {
+        return Quizz(levelId: UUID(), currentQuestionIndex: i, quizModel: quizData[i])
+    }
+    
+    
+    func setCurrentIndex(){
+       
+    }
  
     
 
@@ -45,16 +53,17 @@ class GameManagerVM : ObservableObject {
 
                     //each level have 3 Q only, move to next question
                     if (GameManagerVM.levelQ < 2) {
-                        GameManagerVM.currentIndex = GameManagerVM.currentIndex + 1
                         GameManagerVM.levelQ = GameManagerVM.levelQ + 1
                         self.progressPrecent = self.progressPrecent + 100
-                        self.model = GameManagerVM.createGameModel(i: GameManagerVM.currentIndex)
+                        //next q in the level 
+                        self.model = GameManagerVM.createGameModel(i: self.model.currentQuestionIndex+1)
                     }
                     // if you reached the last question in the level
                     else {
                         self.model.quizCompleted = true
                         self.model.quizWinningStatus = true
-                        GameManagerVM.levelStartIndex = GameManagerVM.levelStartIndex+3
+                        GameManagerVM.levelQ = 0
+                        GameManagerVM.levelStartIndex = self.model.currentQuestionIndex-2
                     }
                     }
             }
@@ -68,31 +77,41 @@ class GameManagerVM : ObservableObject {
                     //If u used all ur hitpoints then end the level
                     self.model.quizCompleted = true
                     self.model.quizWinningStatus = false
-                    GameManagerVM.levelStartIndex = GameManagerVM.levelStartIndex+3
+                   // GameManagerVM.levelStartIndex = GameManagerVM.levelStartIndex
+                    GameManagerVM.levelStartIndex = self.model.currentQuestionIndex - GameManagerVM.levelQ
                     hitPoints = 3
+                    GameManagerVM.levelQ = 0
                 }
             }
                 
         }
     }
     
+    
+    func resetProcess(){
+        GameManagerVM.levelQ = 0
+        self.progressPrecent = 0
+        GameManagerVM.levelStartIndex = 0
+       // GameManagerVM.currentIndex = 0
+    }
+    
     func restartGame(){
         GameManagerVM.levelQ = 0
         self.progressPrecent = 0
-        if ((GameManagerVM.levelStartIndex == 3)||(GameManagerVM.levelStartIndex == 0)){
-            GameManagerVM.levelStartIndex = 0
-        }else{
-            GameManagerVM.levelStartIndex = GameManagerVM.levelStartIndex-3
-        }
+//        if ((GameManagerVM.levelStartIndex == 3)||(GameManagerVM.levelStartIndex == 0)){
+//            GameManagerVM.levelStartIndex = 0
+//        }else{
+//            GameManagerVM.levelStartIndex = GameManagerVM.levelStartIndex-3
+//        }
         GameManagerVM.currentIndex = GameManagerVM.levelStartIndex
         model = GameManagerVM.createGameModel(i: GameManagerVM.levelStartIndex)
  
     }
     
     func nextGame(){
-        model = GameManagerVM.createGameModel(i: GameManagerVM.levelStartIndex)
+        model = GameManagerVM.createGameModel(i: GameManagerVM.levelStartIndex+3)
         self.progressPrecent = 0
         GameManagerVM.levelQ = 0
-        GameManagerVM.currentIndex = GameManagerVM.currentIndex + 1
+       // GameManagerVM.currentIndex = GameManagerVM.currentIndex + 1
     }
 }
