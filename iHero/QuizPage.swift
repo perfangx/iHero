@@ -9,22 +9,28 @@ import SwiftUI
 
 struct QuizPage: View {
     @ObservedObject var gameManagerVM : GameManagerVM
+   // var gameManagerVM : GameManagerVM
+    var currentLevel : Int = 0
+    var QuizPageTopic : String = ""
+    
 //    @State var hitPoints : Int = 5
     //to select buttons
 //    @State var didTap:Bool = false
     var body: some View {
         NavigationView(){
             ZStack{
+                
                 //background color
                 Color("bgColor")
                     .ignoresSafeArea()
-                
                 
                 if(gameManagerVM.model.quizCompleted){
                     QuizCompletedView(gameManagerVM:gameManagerVM)
                 }else {
                     //**** CONTENT *******
                     VStack{
+                      //  Text(QuizPageTopic)
+                        Text("\(currentLevel)")
                         // TITLE AND QUESTION
                         reusableText(title: gameManagerVM.model.quizModel.quizTitle, QuizQuestion: gameManagerVM.model.quizModel.question, progressPrecent: gameManagerVM.progressPrecent )
                         //Q OPTIONS
@@ -58,6 +64,11 @@ struct QuizPage: View {
         }
      
             
+        }
+        .onAppear{
+            GameManagerVM.levelStartIndex = currentLevel
+            print(GameManagerVM.currentIndex)
+           // Text("\(GameManagerVM.currentIndex)")
         }
         
     }

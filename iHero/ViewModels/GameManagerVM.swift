@@ -15,8 +15,8 @@ class GameManagerVM : ObservableObject {
     static var levelStartIndex = 0
     static var levelQ = 0
     static var currentIndex = 0
-   
-    @Published var model = GameManagerVM.createGameModel(i: GameManagerVM.currentIndex)
+    
+    @Published var model = GameManagerVM.createGameModel(i: GameManagerVM.levelStartIndex)
     @Published var hitPoints : Int = 3
     @Published var progressPrecent : CGFloat = 0
     
@@ -27,7 +27,10 @@ class GameManagerVM : ObservableObject {
         return Quizz(levelId: UUID(), currentQuestionIndex: i, quizModel: quizData[i])
     }
     
-   
+    
+    func setCurrentIndex(){
+       
+    }
  
     
 
@@ -59,7 +62,7 @@ class GameManagerVM : ObservableObject {
                     else {
                         self.model.quizCompleted = true
                         self.model.quizWinningStatus = true
-                        GameManagerVM.levelStartIndex = GameManagerVM.levelStartIndex+3
+                        GameManagerVM.levelStartIndex = GameManagerVM.levelStartIndex
                     }
                     }
             }
