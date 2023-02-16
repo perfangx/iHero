@@ -13,6 +13,8 @@ struct Main: View {
     
     @ObservedObject var gameVM : GameManagerVM = GameManagerVM()
     
+    @State var selected = false
+    
     var body: some View {
         NavigationView {
             ZStack{
@@ -31,12 +33,26 @@ struct Main: View {
                     .toolbar {
                         ToolbarItem(placement: .principal) {
                             HStack{
-                                Button{
+                               
+//                                    NavigationLink {
+//                                        referencePage()
+//                                        
+//                                    } label: {
+//                                        Image(systemName: "book")
+//                                            .foregroundColor(.white)
+//                                      
+//                                    }
+                                
+                                HStack {
                                     
-                                } label: {
                                     Image(systemName: "book")
                                         .foregroundColor(.white)
+                                    
+                                }.onTapGesture {
+                                    selected.toggle()
                                 }
+
+                                
                                 Spacer()
                                 Text("iHero").font(.largeTitle).fontWeight(.bold)
                                     .foregroundColor(.white)
@@ -44,6 +60,9 @@ struct Main: View {
                                 HStack{
                                     Image(systemName: "heart.fill")
                                         .foregroundColor(/*@START_MENU_TOKEN@*/Color("darkRed")/*@END_MENU_TOKEN@*/)
+                                    
+                                   
+                                    
                                     Text("\(gameVM.hitPoints)")
                                         .foregroundColor(.white)
                                 }
@@ -53,6 +72,8 @@ struct Main: View {
                         }
                         
                     }
+                    
+                    NavigationLink("test", destination: referencePage(), isActive: $selected)
                 }
                 .toolbarBackground(Color("bgColor"),for: .navigationBar)
             }
