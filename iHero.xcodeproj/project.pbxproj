@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7CC9B212994D961008F2FF2 /* SingleOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CC9B202994D961008F2FF2 /* SingleOnboardingView.swift */; };
+		A7CC9B232994D990008F2FF2 /*  onboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CC9B222994D990008F2FF2 /*  onboardingView.swift */; };
+		A7CC9B2A29994A5A008F2FF2 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CC9B2929994A5A008F2FF2 /* Sheet.swift */; };
 		D4CF162029923BEA003922AD /* iHeroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF161F29923BEA003922AD /* iHeroApp.swift */; };
 		D4CF162229923BEA003922AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF162129923BEA003922AD /* ContentView.swift */; };
 		D4CF162429923BEB003922AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4CF162329923BEB003922AD /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A7CC9B202994D961008F2FF2 /* SingleOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleOnboardingView.swift; sourceTree = "<group>"; };
+		A7CC9B222994D990008F2FF2 /*  onboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " onboardingView.swift"; sourceTree = "<group>"; };
+		A7CC9B2929994A5A008F2FF2 /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
 		D4CF161C29923BEA003922AD /* iHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CF161F29923BEA003922AD /* iHeroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iHeroApp.swift; sourceTree = "<group>"; };
 		D4CF162129923BEA003922AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,10 +63,13 @@
 			children = (
 				D4CF161F29923BEA003922AD /* iHeroApp.swift */,
 				D4CF162129923BEA003922AD /* ContentView.swift */,
+				A7CC9B202994D961008F2FF2 /* SingleOnboardingView.swift */,
+				A7CC9B222994D990008F2FF2 /*  onboardingView.swift */,
 				D4CF162329923BEB003922AD /* Assets.xcassets */,
 				D4CF162829923BEB003922AD /* Persistence.swift */,
 				D4CF162A29923BEB003922AD /* iHero.xcdatamodeld */,
 				D4CF162529923BEB003922AD /* Preview Content */,
+				A7CC9B2929994A5A008F2FF2 /* Sheet.swift */,
 			);
 			path = iHero;
 			sourceTree = "<group>";
@@ -89,6 +98,8 @@
 			dependencies = (
 			);
 			name = iHero;
+			packageProductDependencies = (
+			);
 			productName = iHero;
 			productReference = D4CF161C29923BEA003922AD /* iHero.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +128,8 @@
 				Base,
 			);
 			mainGroup = D4CF161329923BEA003922AD;
+			packageReferences = (
+			);
 			productRefGroup = D4CF161D29923BEA003922AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,9 +157,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4CF162929923BEB003922AD /* Persistence.swift in Sources */,
+				A7CC9B232994D990008F2FF2 /*  onboardingView.swift in Sources */,
 				D4CF162C29923BEB003922AD /* iHero.xcdatamodeld in Sources */,
 				D4CF162229923BEA003922AD /* ContentView.swift in Sources */,
+				A7CC9B212994D961008F2FF2 /* SingleOnboardingView.swift in Sources */,
 				D4CF162029923BEA003922AD /* iHeroApp.swift in Sources */,
+				A7CC9B2A29994A5A008F2FF2 /* Sheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iHero/Preview Content\"";
-				DEVELOPMENT_TEAM = KX287ZLHJH;
+				DEVELOPMENT_TEAM = Z8W5GKT6RA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -304,7 +320,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iHero/Preview Content\"";
-				DEVELOPMENT_TEAM = KX287ZLHJH;
+				DEVELOPMENT_TEAM = Z8W5GKT6RA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

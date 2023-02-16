@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 @main
 struct iHeroApp: App {
     let persistenceController = PersistenceController.shared
