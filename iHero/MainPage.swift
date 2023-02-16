@@ -73,7 +73,7 @@ struct Main: View {
                         
                     }
                     
-                    NavigationLink("test", destination: referencePage(), isActive: $selected)
+                    NavigationLink("", destination: referencePage(), isActive: $selected)
                 }
                 .toolbarBackground(Color("bgColor"),for: .navigationBar)
             }

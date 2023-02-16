@@ -38,7 +38,7 @@ var body: some View {
                 Button {
                     
                     withAnimation(.spring()) {
-                        isUserOnboarded = true
+                       // isUserOnboarded = true
                     }
                 }
                 
