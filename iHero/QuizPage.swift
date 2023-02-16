@@ -91,7 +91,7 @@ struct QuizPage: View {
                     
                 }
             }
-            case "Chocking" : do {
+            case "CPR" : do {
                 switch currentLevel {
                 case  1: do {
                     gameManagerVM.model=GameManagerVM.createGameModel(i: GameManagerVM.currentIndex+12)
@@ -104,6 +104,24 @@ struct QuizPage: View {
                 }
                 case  4: do {
                     gameManagerVM.model=GameManagerVM.createGameModel(i: GameManagerVM.currentIndex+21)
+                }
+                default: break
+                    
+                }
+            }
+            case "Burns" : do {
+                switch currentLevel {
+                case  1: do {
+                    gameManagerVM.model=GameManagerVM.createGameModel(i: GameManagerVM.currentIndex+24)
+                }
+                case  2: do {
+                    gameManagerVM.model=GameManagerVM.createGameModel(i: GameManagerVM.currentIndex+27)
+                }
+                case  3: do {
+                    gameManagerVM.model=GameManagerVM.createGameModel(i: GameManagerVM.currentIndex+30)
+                }
+                case  4: do {
+                    gameManagerVM.model=GameManagerVM.createGameModel(i: GameManagerVM.currentIndex+33)
                 }
                 default: break
                     

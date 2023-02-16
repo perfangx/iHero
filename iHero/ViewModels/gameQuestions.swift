@@ -30,7 +30,7 @@ extension GameManagerVM
 //                               QuizOption(id: 14, optionId: "D", option: "Cortisol")]),
         
         //MARK: level 1 questions in Abnormal Sugar Levels
-        QuizModel(quizTitle: "Abnormal Sugar Levels", quizLevelNum: 0, question: ":Diabetes is a chronic disease that occurs either when the pancreas does not produce enough insulin or when the body cannot effectively use the insulin it produces?",
+        QuizModel(quizTitle: "Abnormal Sugar Levels", quizLevelNum: 0, question: "Diabetes is a chronic disease that occurs either when the pancreas does not produce enough insulin or when the body cannot effectively use the insulin it produces?",
                   answer: "A",
                   optionList: [QuizOption(id: 11, optionId: "A", option: "True"),
                                QuizOption(id: 12, optionId: "B", option: "False"),

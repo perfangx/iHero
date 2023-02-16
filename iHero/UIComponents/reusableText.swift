@@ -44,7 +44,8 @@ struct reusableText: View {
                 Text(QuizQuestion)
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
-                    .frame(width: 291, height: 50)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(width: 291, height: 85)
                     .padding()
             }
         }

@@ -208,8 +208,9 @@ struct FirstAidKit: View {
 struct Choking: View {
     var body: some View {
         VStack {
-            Text("Instructions for treating choking:")
+            Text("Introduction:")
                 .font(.headline)
+                .multilineTextAlignment(.leading)
                 .padding(.bottom, 10)
             
             Text("1. Perform the Heimlich maneuver.")

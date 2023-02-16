@@ -20,6 +20,8 @@ struct Main: View {
                     .ignoresSafeArea()
                 ScrollView{
                     VStack{
+                        Spacer()
+                        Spacer()
                         ForEach(0..<gameVM.theGame.count){ ii in
                             div(theDivTopic: gameVM.theGame[ii].topic, theNumOfLevels: gameVM.theGame[ii].levels, theColor: gameVM.theGame[ii].color)
                             
