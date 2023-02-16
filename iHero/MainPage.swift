@@ -11,7 +11,7 @@ struct Main: View {
     
   //  @State var hitPoints : Int = 3
     
-    @ObservedObject var gameVM : GameManagerVM
+    @ObservedObject var gameVM : GameManagerVM = GameManagerVM()
     
     var body: some View {
         NavigationView {

@@ -16,7 +16,8 @@ struct iHeroApp: App {
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
             //    QuizPage(gameManagerVM: GameManagerVM())
-            Main( gameVM: GameManagerVM())
+          //  Main( gameVM: GameManagerVM())
+            OnbordingView()
 //            referencePage()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
