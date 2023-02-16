@@ -105,11 +105,15 @@ struct ImageGrid: View {
                                                     .foregroundColor(.white)
                                             }
                                             ToolbarItem(placement: .navigationBarLeading){
-                                                Button{}
-                                            label:{
-                                                Image(systemName: "chevron.backward")
-                                                    .foregroundColor(.white)
-                                            }
+                                                Button{
+                                                  
+                                                } label: {
+                                                    NavigationLink(destination:
+                                                                    Main(gameVM: GameManagerVM())
+                                                                   , label: { Image(systemName: "chevron.backward")
+                                                        .foregroundColor(.white)})
+                                                   
+                                                }
                                                 
                                             }
                                         }
@@ -117,6 +121,7 @@ struct ImageGrid: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
