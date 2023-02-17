@@ -13,14 +13,23 @@ struct QuizCompletedView: View{
     var body: some View{
       
             VStack{
-                Text(gameManagerVM.model.quizWinningStatus ? "You finished": "game over, you lost")
-                    .font(.title).fontWeight(.bold)
-                    .foregroundColor(.white)
+                
+                Image(gameManagerVM.model.quizWinningStatus ? "happyface": "sadface")
+                    .resizable()
+                    .frame(width: 99 ,height: 99)
                     .padding()
-                Text(gameManagerVM.model.quizWinningStatus ? "next level": "try again")
-                    .font(.title).fontWeight(.bold)
+
+                Text(gameManagerVM.model.quizWinningStatus ? "Excellent": "Ooops !!")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .font(.system(size:30))
                     .foregroundColor(.white)
-                    .padding()
+                    .padding(12)
+                Text(gameManagerVM.model.quizWinningStatus ? "Great job, you just completed this level": "You consumed all your hit points")
+                    .fontWeight(.bold)
+                    .font(.system(size:20))
+                    .foregroundColor(.white)
+                  //  .padding(.bottom,160)
                 
                 
                 Button {
@@ -45,16 +54,37 @@ struct QuizCompletedView: View{
                         Button {
                             gameManagerVM.nextGame()
                         } label: {
-                            Text("Next level")
-                                .frame(width:281 , height:41 )
-                                .foregroundColor(.white)
-                                .background(Color("primaryColor"))
-                                .cornerRadius(8)
-                                .fontWeight(.semibold)
+                            Text("Next Level")
+                                .fontWeight(.bold)
+                                .font(.system(size:20))
+                                .frame(width: 281, height: 20)
                                 .padding()
+                                .foregroundColor(.white)
+                            
+                                .background(Color("primaryColor"))
+                                .cornerRadius(15)
+                            
+                               // .padding(.top,180)
+                               
                         }
                     }
             }
+              
+                Button {
+                    gameManagerVM.restartGame()
+                } label:  {
+                    NavigationLink(destination:
+                                    Main(gameVM: GameManagerVM())
+                                   , label: {
+                        Text("Exit Level")
+                            .fontWeight(.bold)
+                            .font(.system(size:20))
+                            .padding()
+                            .foregroundColor(.red)})
+                   
+                }
+               // .padding(.top,300)
+                .presentationDetents([.medium,.large])
         }
     }
 }

@@ -64,7 +64,6 @@ struct OnbordingView: View {
 
 var body: some View {
     NavigationView{
-        if (isUserOnboarded == true){
         ZStack {
             
             VStack {
@@ -95,10 +94,7 @@ var body: some View {
                 
             })
         }
-        }
-        else {
-            Main()
-        }
+       
     }
 .ignoresSafeArea()
 .onAppear {
