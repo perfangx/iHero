@@ -142,7 +142,7 @@ struct FirstAidDetailView: View {
                 switch titles {
                               case "Bleeding":
                                   Bleeding()
-                              case "FirstAidKit":
+                              case "First Aid Kit":
                                   FirstAidKit()
                               case "Choking":
                                   Choking()
@@ -150,6 +150,8 @@ struct FirstAidDetailView: View {
                                   Burns()
                               case "Abnormal Sugar level":
                                   Abnormal_Sugar_Level()
+                              case "Stroke":
+                                  Stroke()
                               default:
                                   Text("No information available.")
                               }
@@ -253,15 +255,29 @@ struct Bleeding: View {
 
 struct FirstAidKit: View {
     var body: some View {
-        VStack {
-            Text("Instructions ")
-                .font(.headline)
-                .padding(.bottom, 10)
+        ScrollView{
             
-            Text("1. immobilize the injured area using a splint or sling.")
-            Text("2. Keep the injured limb elevated above the heart.")
-            Text("3. Seek medical attention immediately.")
-        }
+            VStack(alignment: .leading , spacing: 4) {
+                Text("What should I keep in my first aid kit?:")
+                    .font(.system(size: 24,weight: .bold))
+                    .foregroundColor(.white)
+                    .padding(.bottom, 10)
+                Text("It's important to have a well-stocked first aid kit in your home so you can deal with minor accidents and injuries.\nYour first aid kit should be locked and kept in a cool, dry place out of the reach of children.\nMany people also keep a small first aid kit in their car for emergencies.\nA basic first aid kit may contain:")
+                    .foregroundColor(.white)
+                    .font(.system(size: 20))
+                    .padding(.leading,10)
+                Text("•plasters in a variety of different sizes and shapes.\n•small, medium and large sterile gauze dressings.\n•at least 2 sterile eye dressings.\n•triangular bandages,crêpe rolled bandages.\n•safety pins.\n•disposable sterile gloves.\n•tweezers,scissors.\n•alcohol-free cleansing wipes.\n•sticky tape.\n•thermometer (preferably digital).\n•skin rash cream, such as hydrocortisone or calendula.\n•cream or spray to relieve insect bites and stings.\n•antiseptic cream.\n•painkillers such as paracetamol (or infant paracetamol for children), aspirin (not to be given to children under 16), or ibuprofen.\n•antihistamine cream or tablets.\n•distilled water for cleaning wounds.\n•eye wash and eye bath.")
+                    .foregroundColor(.white)
+                    .font(.system(size:18))
+                    .padding(.leading,20)
+                Text("It may also be useful to keep a basic first aid manual or instruction booklet with your first aid kit.\nMedicines should be checked regularly to make sure they're within their use-by dates.")
+                    .foregroundColor(.white)
+                    .font(.system(size: 20))
+                    .padding(.leading,10)
+                
+                
+            }.padding(.leading,20)
+        }.toolbarBackground(Color("bgColor"),for: .navigationBar)
     }
 }
 
@@ -522,6 +538,50 @@ struct Abnormal_Sugar_Level: View {
     }
 }
 
+struct Stroke: View {
+    var body: some View {
+        
+        ScrollView{
+            
+            VStack(alignment: .leading , spacing: 4) {
+                Group{
+                    Text("First aid procedure for Stroke:")
+                        .font(.system(size: 24,weight: .bold))
+                        .foregroundColor(.white)
+                        .padding(.bottom, 10)
+                    Text("When a person is having a stroke, every second counts. And what you do in those critical moments can potentially help save someone’s life.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                    Text("Presuders to Do When Someone Is Having a Stroke:")
+                        .foregroundColor(.white)
+                        .font(.system(size: 22,weight: .bold))
+                    Text("1.Call 911 or 997 immediately:")
+                        .foregroundColor(.white)
+                        .font(.system(size:20))
+                        .padding(.leading,10)
+                    Text("If you do observe any symptoms, you should call 911 immediately,Not sure what the symptoms of a stroke are? Give someone you think is having a stroke this FAST test from the National Stroke Association:\n•F:Face , Ask them to smile.Does one side look like drooping ?\n•A:Arm , Instruct them to raise both arms.Dose one arm drift downward?\n•S:Speech , Ask them to say something .Dose it sound strange?\n•T:Time if you observe symptoms call the ambulance immediately.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,20)
+                    Text("2.Note the time you first see symptoms.\n3.Perform CPR, if necessary.\n4.Do not let that person go to sleep.\n5.Do not give them medication, food, or drinks:")
+                        .foregroundColor(.white)
+                        .font(.system(size:20))
+                        .padding(.leading,10)
+                    Text("There are two kinds of strokes:\n•Hemorrhagic stroke, caused by a ruptured blood vessel leading to brain bleeds\n•Ischemic stroke, caused by a clot leading to blockage in a blood vessel.\n80 percent of strokes are ischemic ones, but if you’re in that 20 percent and your stroke was caused by a ruptured blood vessel in the head, you don’t want to take aspirin,And you can’t tell which one it is until you get to the emergency room and you get a CAT scan.\nAspirin actually might hurt the patient more, and cause more bleeding if in fact they are having a hemorrhagic stroke, because aspirin is a blood thinner.\nTo be safe, don’t give someone who has stroke symptoms any medication.\nYou also shouldn’t give them food or drinks before the ambulance comes.\nSometimes, a stroke affects their ability to swallow. This could ultimately cause more harm to the person if they choke and develop infections or trouble breathing.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,20)
+                    Text("6.Do not drive yourself to the emergency room.")
+                        .foregroundColor(.white)
+                        .font(.system(size:20))
+                        .padding(.leading,10)
+                }
+               
+            }.padding(.leading,20)
+        }.toolbarBackground(Color("bgColor"),for: .navigationBar)
+    }
+}
+
 struct referencePage: View {
     let images = ["firstAidKitImage","chokingImage","bleedingImage","cbrImage","image5","image6" ,"image6" ,"image6" ]
     let titles = ["First Aid Kit", "Choking", "Bleeding", "CBR", "Abnormal Sugar level" , "Burns" , "Seizure", "Stroke" ,"Nosebleeds"]
@@ -532,6 +592,8 @@ struct referencePage: View {
         ImageGrid(images: images , titles: titles , otherImages: otherImages , otherTitles: otherTitles)
     }
 }
+
+
 
 struct referencePage_Previews: PreviewProvider {
     static var previews: some View {
