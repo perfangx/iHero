@@ -117,7 +117,7 @@ class GameManagerVM : ObservableObject {
         GameManagerVM.levelQ = 0
         self.progressPrecent = 0
         GameManagerVM.levelStartIndex = 0
-        GameManagerVM.currentIndex = 0
+       // GameManagerVM.currentIndex = 0
     }
     
     func restartGame(){
@@ -133,6 +133,7 @@ class GameManagerVM : ObservableObject {
         if hitPoints == 0{
             self.hitPoints = 3
         }
+        
  
     }
     

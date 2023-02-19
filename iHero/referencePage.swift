@@ -662,12 +662,13 @@ struct NoseBleeds: View {
 struct Acknowledgment: View {
     var body: some View {
        
-            VStack(alignment: .center , spacing: 4) {
+            VStack(alignment: .leading , spacing: 4) {
                 
-                Text("Words cannot express our gratitude to Dr.Nawaf Alsayed for his time and effort in assisting us with his knowledge and providing the best resources for the content of this app, Additionally, this App would not have been possible without the generous support from the Apple Developer academy and all the mentors for their invaluable patience and feedback.")
+                Text("Words cannot express our gratitude to Paramedic Specialist Mr.Nawaf Alsayed for his time and effort in assisting us with his knowledge and providing the best resources for the content of this app, Additionally, this App would not have been possible without the generous support from the Apple Developer academy and all the mentors for their invaluable patience and feedback.")
                     .padding()
                 Text("We hope this app would be a great resource to learn about first aid and help in saving lives, and remember: Play like a Hero, turn into a Hero")
                     .padding()
+              
             }
             .foregroundColor(.white)
         

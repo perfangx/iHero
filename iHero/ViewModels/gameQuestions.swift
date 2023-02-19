@@ -279,8 +279,8 @@ extension GameManagerVM
                   answer: "D",
                   optionList: [QuizOption(id: 11, optionId: "A", option: "Remove burnt clothes stuck on the skin."),
                                QuizOption(id: 12, optionId: "B", option: "Place large burned areas inside cold water ."),
-                               QuizOption(id: 13, optionId: "A", option: "Apply any ointments "),
-                               QuizOption(id: 14, optionId: "B", option: "All the above")])
+                               QuizOption(id: 13, optionId: "C", option: "Apply any ointments "),
+                               QuizOption(id: 14, optionId: "D", option: "All the above")])
 
        ]
         
