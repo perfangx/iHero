@@ -646,7 +646,7 @@ struct NoseBleeds: View {
 }
 
 struct referencePage: View {
-    let images = ["firstAidKitImage","chokingImage","bleedingImage","cbrImage","image5","image6" ,"image6" ,"image6" ]
+    let images = ["firstAidKitImage","chokingImage","bleedingImage","cbrImage","blood sugar","Burns" ,"Nosebleeds" ,"Stroke" ]
     let titles = ["First Aid Kit", "Choking", "Bleeding", "CBR", "Abnormal Sugar level" , "Burns" , "Nose Bleeds", "Stroke" ]
     
     let otherImages = ["sosImage" , "acknowledgmentImage"]
