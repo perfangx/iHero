@@ -17,11 +17,19 @@ class GameManagerVM : ObservableObject {
     static var currentIndex = 0
     
     @Published var model = GameManagerVM.createGameModel(i: GameManagerVM.levelStartIndex)
-    @Published var hitPoints : Int = 3
+//    @Published var hitPoints : Int = 3
     @Published var progressPrecent : CGFloat = 0
     
     @Published var theGame = GameData
-    
+    @Published var hasSeenAd = false
+
+    static let userDefaults = UserDefaults.standard
+    @Published var hitPoints : Int = 3 {
+           didSet {
+               // Save hit points to UserDefaults
+               GameManagerVM.userDefaults.set(hitPoints, forKey: "hitPoints")
+           }
+       }
     //Creating new game model
     static func createGameModel(i:Int) -> Quizz {
         return Quizz(levelId: UUID(), currentQuestionIndex: i, quizModel: quizData[i])
@@ -32,7 +40,12 @@ class GameManagerVM : ObservableObject {
        
     }
  
-    
+    init() {
+        // Load hit points from UserDefaults
+        if let savedHitPoints = GameManagerVM.userDefaults.object(forKey: "hitPoints") as? Int {
+            hitPoints = savedHitPoints
+        }
+    }
 
     
     func verifyAnswer(selectedOption: QuizOption){
@@ -72,16 +85,28 @@ class GameManagerVM : ObservableObject {
                 //reduce 1 hit point and show red mark for the wrong option
                 model.quizModel.optionList[index].isMatched = false
                 model.quizModel.optionList[index].isSelected = true
-                hitPoints = hitPoints-1
-                if (hitPoints == 0){
-                    //If u used all ur hitpoints then end the level
-                    self.model.quizCompleted = true
-                    self.model.quizWinningStatus = false
-                   // GameManagerVM.levelStartIndex = GameManagerVM.levelStartIndex
-                    GameManagerVM.levelStartIndex = self.model.currentQuestionIndex - GameManagerVM.levelQ
-                    hitPoints = 3
-                    GameManagerVM.levelQ = 0
-                }
+//                hitPoints = hitPoints-1
+                
+                hitPoints = max(0, hitPoints - 1)
+                                          if (hitPoints == 0){
+//                                              self.hitPoints = 3
+                                              //If u used all ur hitpoints then end the level
+                                              self.model.quizCompleted = true
+                                              self.model.quizWinningStatus = false
+                                             // GameManagerVM.levelStartIndex = GameManagerVM.levelStartIndex
+                                              GameManagerVM.levelStartIndex = self.model.currentQuestionIndex - GameManagerVM.levelQ
+                                              GameManagerVM.levelQ = 0
+                                          }
+
+//                if (hitPoints == 0){
+//                    //If u used all ur hitpoints then end the level
+//                    self.model.quizCompleted = true
+//                    self.model.quizWinningStatus = false
+//                   // GameManagerVM.levelStartIndex = GameManagerVM.levelStartIndex
+//                    GameManagerVM.levelStartIndex = self.model.currentQuestionIndex - GameManagerVM.levelQ
+//                    hitPoints = 3
+//                    GameManagerVM.levelQ = 0
+//                }
             }
                 
         }
@@ -92,7 +117,7 @@ class GameManagerVM : ObservableObject {
         GameManagerVM.levelQ = 0
         self.progressPrecent = 0
         GameManagerVM.levelStartIndex = 0
-       // GameManagerVM.currentIndex = 0
+        GameManagerVM.currentIndex = 0
     }
     
     func restartGame(){
@@ -105,6 +130,9 @@ class GameManagerVM : ObservableObject {
 //        }
         GameManagerVM.currentIndex = GameManagerVM.levelStartIndex
         model = GameManagerVM.createGameModel(i: GameManagerVM.levelStartIndex)
+        if hitPoints == 0{
+            self.hitPoints = 3
+        }
  
     }
     
