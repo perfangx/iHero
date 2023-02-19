@@ -45,7 +45,7 @@ struct reusableText: View {
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
-                    .frame(width: 291, height: 85)
+                    .frame(width: 291, height: 110)
                     .padding()
             }
         }

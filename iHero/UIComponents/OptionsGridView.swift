@@ -50,7 +50,7 @@ struct OptionCardView: View{
 //            } else {
                 OptinView(quizOption: quizOption)
 //            }
-        }   .frame(width: 166,height: 49)
+        }   .frame(width: 166,height: 70)
             .background(setBackgroundColor())
             .cornerRadius(8)
     }
@@ -77,6 +77,7 @@ struct OptinView: View{
                 .cornerRadius(8)
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
         }
     }
 }

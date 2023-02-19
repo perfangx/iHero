@@ -35,6 +35,7 @@ struct QuizPage: View {
                         reusableText(title: gameManagerVM.model.quizModel.quizTitle, QuizQuestion: gameManagerVM.model.quizModel.question, progressPrecent: gameManagerVM.progressPrecent )
                         //Q OPTIONS
                         OptionGridView(gameManagerVM: gameManagerVM)
+                        
                         Spacer()
                         
                     }

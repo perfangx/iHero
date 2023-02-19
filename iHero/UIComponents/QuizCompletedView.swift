@@ -55,14 +55,12 @@ struct QuizCompletedView: View{
                             gameManagerVM.nextGame()
                         } label: {
                             Text("Next Level")
-                                .fontWeight(.bold)
-                                .font(.system(size:20))
-                                .frame(width: 281, height: 20)
-                                .padding()
+                                .frame(width:281 , height:41 )
                                 .foregroundColor(.white)
-                            
                                 .background(Color("primaryColor"))
-                                .cornerRadius(15)
+                                .cornerRadius(8)
+                                .fontWeight(.semibold)
+                                .padding()
                             
                                // .padding(.top,180)
                                
