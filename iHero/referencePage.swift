@@ -152,6 +152,8 @@ struct FirstAidDetailView: View {
                                   Abnormal_Sugar_Level()
                               case "Stroke":
                                   Stroke()
+                              case"Nose Bleeds":
+                                  NoseBleeds()
                               default:
                                   Text("No information available.")
                               }
@@ -582,9 +584,70 @@ struct Stroke: View {
     }
 }
 
+struct NoseBleeds: View {
+    var body: some View {
+        
+        ScrollView{
+            
+            VStack(alignment: .leading , spacing: 4) {
+                Group{
+                    Text("First aid procedure for Nose Bleeds:")
+                        .font(.system(size: 24,weight: .bold))
+                        .foregroundColor(.white)
+                        .padding(.bottom, 10)
+                    Text("Introduction:")
+                        .foregroundColor(.white)
+                        .font(.system(size: 22,weight: .bold))
+                    Text("Nosebleeds are common injuries occurring among people, often caused by dry air. Nasal bleeding varies from simple, not serious, and depends on its own to severe, requiring immediate medical attention.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                    Text("Types of nose bleeds:")
+                        .foregroundColor(.white)
+                        .font(.system(size: 22,weight: .bold))
+                    Text("1.Anterior nose bleeding:")
+                        .foregroundColor(.white)
+                        .font(.system(size:20))
+                        .padding(.leading,10)
+                    Text("Which is the most common, originates towards the front of the nose, causes blood flow through the nostrils, and this type is usually not dangerous.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,20)
+                }
+                Group{
+                    Text("2.Back nose bleeding:")
+                        .foregroundColor(.white)
+                        .font(.system(size:20))
+                        .padding(.leading,10)
+                    Text("It comes from the back of the nose passage, near the throat, which is less common than anterior nose bleeding, but it can be dangerous, and can cause a lot of blood loss.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,20)
+                    
+                    Text("Causes of nasal bleeding:")
+                        .foregroundColor(.white)
+                        .font(.system(size: 22,weight: .bold))
+                    Text("•The inside of the nose contains many blood vessels close to the surface of the nose; So it's easy to get it.\n•Most nosebleeds are caused by cold, or dry air.\n•Nasal allergies, or cold, can cause nasal inflammation.\n•Injury to the face, or nose directly, such as: fall, or bicycle accident.\n•Nasal bleeding is rarely caused by a serious problem, such as: bleeding disorders, vascular abnormalities, or a nasal tumor.\n•Drugs, for example, when taking drugs to prevent thrombosis, such as: aspirin and warfarin, one is more likely to develop nasal bleeding, and cannot be easily stopped.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,20)
+                    Text("Nosebleeds First Aid:")
+                        .foregroundColor(.white)
+                        .font(.system(size: 22,weight: .bold))
+                    Text("•Slightly bending forward while sitting or standing, avoiding lying down or head tilted back, as this will cause blood swallow and vomiting.\n•Holding the nose from the soft part (not the bone) in both ways, while avoiding pressure on only one side, even if the bleeding is on only one side.\n•Squeeze your nose closed for at least 5 minutes (for children) or 10 to 15 minutes (for adults). Do not release the pressure every so often to check whether the bleeding has stopped, except after the specified time has passed.\n•Cold compress or ice pack can be applied to the bridge of your nose. This may help the blood vessels constrict and slow the bleeding.\n•If you follow the steps outlined above, and your nose continues to bleed, repeat all the steps once more. Apply pressure for a total of at least 30 minutes. If you continue to bleed, seek emergency medical care")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,20)
+                    
+                }
+               
+            }.padding(.leading,20)
+        }.toolbarBackground(Color("bgColor"),for: .navigationBar)
+    }
+}
+
 struct referencePage: View {
     let images = ["firstAidKitImage","chokingImage","bleedingImage","cbrImage","image5","image6" ,"image6" ,"image6" ]
-    let titles = ["First Aid Kit", "Choking", "Bleeding", "CBR", "Abnormal Sugar level" , "Burns" , "Seizure", "Stroke" ,"Nosebleeds"]
+    let titles = ["First Aid Kit", "Choking", "Bleeding", "CBR", "Abnormal Sugar level" , "Burns" , "Nose Bleeds", "Stroke" ]
     
     let otherImages = ["sosImage" , "acknowledgmentImage"]
     let otherTitles = ["SOS Numbers" , "Acknowledgment"]
