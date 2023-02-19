@@ -62,91 +62,118 @@ struct OnbordingView: View {
 @AppStorage("isUserOnboarded") var isUserOnboarded: Bool = false
 @State var selectedOnboardingType: OnbordingType = .Learning
 
-var body: some View {
-    NavigationView{
+    var body: some View {
+        //    NavigationView{
         ZStack {
             
-            VStack {
-                //skipButton
-                TabView(selection: $selectedOnboardingType) {
-                    
-                    ForEach(OnbordingType.allCases, id: \.localizedString) { onbording in
-                        SingleOnbordingView(onbordingType: onbording)
-                            .tag(onbording)
-                            .onChange(of: selectedOnboardingType, perform: { newValue in
-                                selectedOnboardingType = newValue
-                            })
-                    }
-                }
-                .tabViewStyle(.page(indexDisplayMode: .always))
-                .indexViewStyle(.page(backgroundDisplayMode: .always))
+            //            VStack {
+            //skipButton
+            TabView(selection: $selectedOnboardingType) {
                 
+                ForEach(OnbordingType.allCases, id: \.localizedString) { onbording in
+                    SingleOnbordingView(onbordingType: onbording)
+                        .tag(onbording)
+                        .onChange(of: selectedOnboardingType, perform: { newValue in
+                            selectedOnboardingType = newValue
+                        })
+                }
             }
+            .tabViewStyle(.page(indexDisplayMode: .always))
+            .indexViewStyle(.page(backgroundDisplayMode: .always))
+            
+            //            }
             .padding(.bottom, 50)
             .background(Color("bgColor"))
+            
+            if selectedOnboardingType != .Points {
+                skipButton
+            }
+            //    }
+            //                .onAppear {
+            //                    setupAppearance()
+            //                }
         }
-        .toolbar{
-            NavigationLink(destination:
-                            Main()
-                           , label: { Text("skip")
-                    .foregroundColor(.white)
-                
-                
-            })
+        .onAppear {
+        setupAppearance()
         }
+//        .toolbar{
+//            NavigationLink(destination:
+//                            Main()
+//                           , label: { Text("skip")
+//                    .foregroundColor(.white)
+//                
+//                
+//            })
+//        }
+        
+    }
        
     }
-.ignoresSafeArea()
-.onAppear {
-setupAppearance()
-}
-}
-}
+//.ignoresSafeArea()
+//.onAppear {
+//setupAppearance()
+//}
+//}
+//}
 
 struct OnbordingView_Previews: PreviewProvider {
 static var previews: some View {
 OnbordingView()
 }
 }
-
+extension OnbordingView {
+    var skipButton: some View {
+        Button {
+            withAnimation(.spring()) {
+                isUserOnboarded = true
+            }
+        } label: {
+            Text("skip")
+                .padding(10)
+        }
+        .padding(.top, 1)
+        .padding(.trailing)
+        .frame(maxWidth: .infinity, alignment: .trailing)
+        .frame(maxHeight: .infinity, alignment: .top)
+        .foregroundColor(.white)
+    }
+}
 //extension OnbordingView {
 //var skipButton: some View {
 //
+//Button {
+//withAnimation(.spring()) {
+//isUserOnboarded = true
+//}
+//} label: {
+//    NavigationLink(destination:
+//                    Main()
+//                   , label: { Text("skip")
+//        .foregroundColor(.white)
+//        .padding(.top)
 //
-//
-////Button {
-////withAnimation(.spring()) {
-////isUserOnboarded = true
-////}
-////} label: {
-////    NavigationLink(destination:
-////                    Main()
-////                   , label: { Text("skip")
-////        .foregroundColor(.white)
-////        .padding(.top)
-////
-////    })
-////Text("skip")
-////.padding()
+//    })
+//Text("skip")
+//.padding()
 //
 //
 //
-////}
+//}
 //
-////    Button{
-////    } label: {
-////        NavigationLink(destination:
-////                        Main(gameVM: GameManagerVM())
-////                       , label: { Image(systemName: "xmark.circle")
-////            .foregroundColor(.white)})
-////
-////    }
-////.padding(.top)
-////.padding(.trailing)
-////.frame(maxWidth: .infinity, alignment: .trailing)
-//////.frame(maxHeight: .infinity, alignment: .top)
-////.foregroundColor(.white)
-////}
+//    Button{
+//    } label: {
+//        NavigationLink(destination:
+//                        Main(gameVM: GameManagerVM())
+//                       , label: { Image(systemName: "xmark.circle")
+//            .foregroundColor(.white)})
+//
+//    }
+//.padding(.top)
+//.padding(.trailing)
+//.frame(maxWidth: .infinity, alignment: .trailing)
+////.frame(maxHeight: .infinity, alignment: .top)
+//.foregroundColor(.white)
+//}
 //}
 
 extension OnbordingView {

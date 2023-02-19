@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Main: View {
     
-  //  @State var hitPoints : Int = 3
+    //  @State var hitPoints : Int = 3
     
     @ObservedObject var gameVM : GameManagerVM = GameManagerVM()
     
@@ -30,58 +30,100 @@ struct Main: View {
                         }
                     }
                     .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        ToolbarItem(placement: .principal) {
-                            HStack{
-                               
-//                                    NavigationLink {
-//                                        referencePage()
-//                                        
-//                                    } label: {
-//                                        Image(systemName: "book")
-//                                            .foregroundColor(.white)
-//                                      
-//                                    }
+                    .toolbar{
+                        ToolbarItem(placement: .principal)
+                        {
+                            Text("iHero")
+                                .fontWeight(.bold)
+                                .font(.title)
+                                .foregroundColor(.white)
+                        }
+                        ToolbarItem(placement: .navigationBarLeading){
+                            Button{
                                 
-                                HStack {
-                                    
-                                    Image(systemName: "book")
-                                        .foregroundColor(.white)
-                                    
-                                }.onTapGesture {
-                                    selected.toggle()
-                                }
-
-                                
-                                Spacer()
-                                Text("iHero").font(.largeTitle).fontWeight(.bold)
-                                    .foregroundColor(.white)
-                                Spacer()
-                                HStack{
-                                    Image(systemName: "heart.fill")
-                                        .foregroundColor(/*@START_MENU_TOKEN@*/Color("darkRed")/*@END_MENU_TOKEN@*/)
-                                    
-                                   
-                                    
-                                    Text("\(gameVM.hitPoints)")
-                                        .foregroundColor(.white)
-                                }
+                            } label: {
+                                NavigationLink(destination:
+                                                referencePage()
+                                               , label: { Image(systemName: "book")
+                                    .foregroundColor(.white)})
                                 
                             }
-                            .padding()
+                            
+                        }
+                        ToolbarItem(placement: .navigationBarTrailing){
+                            Button{
+                                
+                            } label: {
+                                //                                NavigationLink(destination:
+                                //                                                Main(gameVM: GameManagerVM())
+                                //                                               , label: {
+                                Image(systemName: "heart.fill")
+                                    .foregroundColor(Color("darkRed"))
+                                
+                                
+                                
+                                Text("\(gameVM.hitPoints)")
+                                    .foregroundColor(.white)
+                                
+                                .foregroundColor(.white)}
+                            
                         }
                         
                     }
                     
-                    NavigationLink("", destination: referencePage(), isActive: $selected)
                 }
-                .toolbarBackground(Color("bgColor"),for: .navigationBar)
+                //                    .toolbar {
+                //                        ToolbarItem(placement: .principal) {
+                //                            HStack{
+                //
+                ////                                    NavigationLink {
+                ////                                        referencePage()
+                ////
+                ////                                    } label: {
+                ////                                        Image(systemName: "book")
+                ////                                            .foregroundColor(.white)
+                ////
+                ////                                    }
+                //
+                //                                HStack {
+                //
+                //                                    Image(systemName: "book")
+                //                                        .foregroundColor(.white)
+                //
+                //                                }.onTapGesture {
+                //                                    selected.toggle()
+                //                                }
+                //
+                //
+                //                                Spacer()
+                //                                Text("iHero").font(.largeTitle).fontWeight(.bold)
+                //                                    .foregroundColor(.white)
+                //                                Spacer()
+                //                                HStack{
+                //                                    Image(systemName: "heart.fill")
+                //                                        .foregroundColor(Color("darkRed"))
+                //
+                //
+                //
+                //                                    Text("\(gameVM.hitPoints)")
+                //                                        .foregroundColor(.white)
+                //                                }
+                //
+                //                            }
+                //                            .padding()
+                //                        }
+                //
+                //                    }
+                
+                //                    NavigationLink("", destination: referencePage(), isActive: $selected)
             }
+            .toolbarBackground(Color("bgColor"),for: .navigationBar)
         }
+        //        }
         .navigationBarBackButtonHidden(true)
     }
-    
 }
+//}
 
 
 //MARK: each topic & levels

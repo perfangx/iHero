@@ -24,6 +24,7 @@
 		D4CF162729923BEB003922AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4CF162629923BEB003922AD /* Preview Assets.xcassets */; };
 		D4CF162929923BEB003922AD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF162829923BEB003922AD /* Persistence.swift */; };
 		D4CF162C29923BEB003922AD /* iHero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4CF162A29923BEB003922AD /* iHero.xcdatamodeld */; };
+		E050A6EF299FF970005C6ADB /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050A6EE299FF970005C6ADB /* SplashScreenView.swift */; };
 		F4C9AC3A299E256D0039A986 /* SingleOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C9AC39299E256D0039A986 /* SingleOnboardingView.swift */; };
 		F4C9AC3C299E25EE0039A986 /* onboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C9AC3B299E25EE0039A986 /* onboardingView.swift */; };
 		F4C9AC3E299E264E0039A986 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C9AC3D299E264E0039A986 /* Sheet.swift */; };
@@ -48,6 +49,7 @@
 		D4CF162629923BEB003922AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D4CF162829923BEB003922AD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D4CF162B29923BEB003922AD /* iHero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iHero.xcdatamodel; sourceTree = "<group>"; };
+		E050A6EE299FF970005C6ADB /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		F4C9AC39299E256D0039A986 /* SingleOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleOnboardingView.swift; sourceTree = "<group>"; };
 		F4C9AC3B299E25EE0039A986 /* onboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingView.swift; sourceTree = "<group>"; };
 		F4C9AC3D299E264E0039A986 /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				D4CF161F29923BEA003922AD /* iHeroApp.swift */,
 				D4CF162129923BEA003922AD /* ContentView.swift */,
 				F4C9AC39299E256D0039A986 /* SingleOnboardingView.swift */,
+				E050A6EE299FF970005C6ADB /* SplashScreenView.swift */,
 				F4C9AC3B299E25EE0039A986 /* onboardingView.swift */,
 				D48DB7882998ED2200B0ED60 /* referencePage.swift */,
 				D4CC9FA52994DC7300B79B3C /* QuizPage.swift */,
@@ -220,6 +223,7 @@
 				32449AAD299B697D00C22873 /* GameModel.swift in Sources */,
 				D4CF162C29923BEB003922AD /* iHero.xcdatamodeld in Sources */,
 				D4CC9FAC2994E74A00B79B3C /* reusableText.swift in Sources */,
+				E050A6EF299FF970005C6ADB /* SplashScreenView.swift in Sources */,
 				D4CF162229923BEA003922AD /* ContentView.swift in Sources */,
 				D4CC9FA42994D91A00B79B3C /* QuizModel.swift in Sources */,
 				D4CF162029923BEA003922AD /* iHeroApp.swift in Sources */,
@@ -355,7 +359,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iHero/Preview Content\"";
-				DEVELOPMENT_TEAM = KX287ZLHJH;
+				DEVELOPMENT_TEAM = DLY9DRQ866;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -384,7 +388,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iHero/Preview Content\"";
-				DEVELOPMENT_TEAM = KX287ZLHJH;
+				DEVELOPMENT_TEAM = DLY9DRQ866;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
