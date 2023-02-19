@@ -154,6 +154,8 @@ struct FirstAidDetailView: View {
                                   Stroke()
                               case"Nose Bleeds":
                                   NoseBleeds()
+                              case "CPR":
+                                  CPR()
                               default:
                                   Text("No information available.")
                               }
@@ -163,7 +165,7 @@ struct FirstAidDetailView: View {
     }
 }
 
-//MARK: this struct for Other topics section
+//MARK: this struct for Other topics section.
 struct OtherDetailView: View {
     let images: String
     let titles: String
@@ -645,9 +647,134 @@ struct NoseBleeds: View {
     }
 }
 
+struct CPR: View {
+    var body: some View {
+        
+        ScrollView{
+            
+            VStack(alignment: .leading , spacing: 4) {
+                Group{
+                    Text("First aid procedure for  Abnormal Sugar level:")
+                        .font(.system(size: 24,weight: .bold))
+                        .foregroundColor(.white)
+                        .padding(.bottom, 10)
+                    
+                    Text("Diabetes is a chronic disease that occurs either when the pancreas does not produce enough insulin or when the body cannot effectively use the insulin it produces. Insulin is a hormone that regulates blood glucose. Hyperglycaemia, also called raised blood glucose or raised blood sugar.\n•Glucose: The carbohydrates and sugars in what you eat and drink turns into glucose (sugar) in the stomach and digestive system. Glucose can then enter the bloodstream.\n•Insulin: Insulin is a hormone made in the pancreas that helps the body’s cells take up glucose from blood and lower blood sugar levels.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                    Text("Types of diabetes:")
+                        .font(.system(size: 22,weight: .bold))
+                        .foregroundColor(.white)
+                        .padding(.bottom, 10)
+                    
+                    Text("1.Type 1 diabetes:")
+                        .foregroundColor(.white)
+                        .font(.system(size: 20,weight: .bold))
+                        .padding(.leading,10)
+                    
+                    
+                    Text("This type of diabetes is also referred to as insulin-dependent diabetes. People with Type 1 diabetes must take insulin or other medications daily. This makes up for the insulin not being produced by the body.\nType 1 diabetes develops when the body’s immune system attacks and destroys cells in the pancreas that make insulin.\nOnce these cells are destroyed, the pancreas produces little or no insulin, so glucose stays in the blood. When there’s too much glucose in the blood, especially for prolonged periods, the organ systems in the body suffer long-term damage.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,20)
+                
+                }
+                Group{
+                    Text("1.Type 2 diabetes:")
+                        .foregroundColor(.white)
+                        .font(.system(size: 20,weight: .bold))
+                        .padding(.leading,10)
+                   
+                    Text("Type 2 diabetes is the most common form of diabetes. Type 2 diabetes has historically been diagnosed primarily in adults. But adolescents and young adults are developing Type 2 diabetes at an alarming rate because of family history and higher rates of obesity and physical inactivity — risk factors for Type 2 diabetes, In Type 2 diabetes, glucose builds up in the blood instead of going into cells\nThis type of diabetes can occur when:\n•The body develops “insulin resistance” and can’t efficiently use the insulin it makes.\n•The pancreas gradually loses its capacity to produce insulin.\nType 2 diabetes may be delayed or controlled with diet and exercise.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,20)
+                }
+                
+                Group{
+                    Text("Track Levels:")
+                        .font(.system(size: 22,weight: .bold))
+                        .foregroundColor(.white)
+                        .padding(.bottom, 10)
+                    Text("Health care professionals can take blood glucose readings and provide recommendations. If you’re diagnosed with Type 2 diabetes, you will need to monitor your blood sugar level regularly.\nKnow Diabetes by Heart can help you manage Type 2 diabetes.\nFasting Blood Glucose Level, Diagnosis and What It Means:")
+                        .foregroundColor(.white)
+                        .font(.system(size: 20))
+                        .padding(.leading,10)
+                    Text("•Lower than 100 mg/dl – Normal – Healthy range.\n•100 to 125 mg/dl – Prediabetes (Impaired Fasting Glucose) – At increased risk of developing diabetes.\n•126 mg/dl or higher– Diabetes Mellitus (Type 2 diabetes) – At increased risk of heart disease or stroke.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,20)
+                    
+                    Text("Tips for Success:")
+                        .foregroundColor(.white)
+                        .font(.system(size: 20,weight:.bold))
+                        .padding(.leading,10)
+                    
+                    Text("•Eat Smart:\nEat a healthy diet of vegetables, fruits, whole grains, beans, legumes, nuts, plant-based proteins, lean animal proteins like fish and seafood. Limit sugary foods and drinks, red or processed meats, salty foods, refined carbohydrates and highly processed foods.\n•Move More:\nBeing physically active can lower your risk of developing diabetes and help you manage the disease if you already have it.\n•Manage Weight:\nStay at a healthy weight to help prevent, delay or manage diabetes.\n•No Nicotine:\nSmoking, vaping, exposure to secondhand smoke or using tobacco can increase your risk of heart disease, stroke, many cancers and other chronic diseases. It may also make prediabetes and diabetes harder to manage.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,20)
+                }
+                Group{
+                    Text("First Aid for Low Sugar Attack:")
+                        .font(.system(size: 22,weight: .bold))
+                        .foregroundColor(.white)
+                        .padding(.bottom, 10)
+                    
+                    Text("If the patient is unconscious:")
+                        .foregroundColor(.white)
+                        .font(.system(size: 20,weight:.bold))
+                        .padding(.leading,10)
+                    
+                    Text("Follow the rule of 15 15 15\n1.15 grams of fast-absorbing sugars such as half a cup of juice, a spoon of honey or 3 spoons of sugar dissolved in water.\n2. After 15 minutes, blood sugar is measured if the result is higher or equal to 70, the infected person is given 15 grams of carbohydrates.\n3. If blood sugar is less than 70,  redo one step, until the blood sugar rises to 70 or more, and then the injured person is given a snack.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,20)
+                    
+                    Text("If the patient is conscious:")
+                        .foregroundColor(.white)
+                        .font(.system(size: 20,weight:.bold))
+                        .padding(.leading,10)
+                    
+                    Text("The patient is injected with glucagon injection after 15 to 20 minutes. Blood sugar will rise and a snack will be taken. If the injection is not available, the patient should be hospitalized as soon as possible.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,20)
+                }
+                Group{
+                    Text("First Aid for High Sugar Attack:")
+                        .font(.system(size: 22,weight: .bold))
+                        .foregroundColor(.white)
+                        .padding(.bottom, 10)
+                    
+                    Text("Symptoms:")
+                        .foregroundColor(.white)
+                        .font(.system(size: 20,weight:.bold))
+                        .padding(.leading,10)
+                    
+                    Text("1.Thirst.\n2.The patient feels dry in the throat.\n3.A low heart rate of less than 100 per minute.\n4.Feeling tired.\n5.Unaware.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,20)
+                    
+                    Text("Procedures:")
+                        .foregroundColor(.white)
+                        .font(.system(size: 20,weight:.bold))
+                        .padding(.leading,10)
+                    
+                    Text("1.Drink water in quantity\n2.Take the medicine.\n3.Go to the hospital.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,20)
+                }
+            }.padding(.leading,20)
+        }.toolbarBackground(Color("bgColor"),for: .navigationBar)
+    }
+}
+
 struct referencePage: View {
     let images = ["firstAidKitImage","chokingImage","bleedingImage","cbrImage","blood sugar","Burns" ,"Nosebleeds" ,"Stroke" ]
-    let titles = ["First Aid Kit", "Choking", "Bleeding", "CBR", "Abnormal Sugar level" , "Burns" , "Nose Bleeds", "Stroke" ]
+    let titles = ["First Aid Kit", "Choking", "Bleeding", "CPR", "Abnormal Sugar level" , "Burns" , "Nose Bleeds", "Stroke" ]
     
     let otherImages = ["sosImage" , "acknowledgmentImage"]
     let otherTitles = ["SOS Numbers" , "Acknowledgment"]
