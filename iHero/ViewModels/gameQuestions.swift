@@ -174,7 +174,7 @@ extension GameManagerVM
         
         //MARK: level 4 questions in CPR
         QuizModel(quizTitle: "CPR", quizLevelNum: 0, question: "Perform artificial respiration by blowing into the patient's mouth twice slowly . Watch the height of the patient's chest  and wait for his chest to fall between the first and second puff ,when do you this operation ?",
-                  answer: "c",
+                  answer: "C",
                   optionList: [QuizOption(id: 11, optionId: "A", option: "When the patient is breathing "),
                                QuizOption(id: 12, optionId: "B", option: "Before the CPR"),
                                QuizOption(id: 13, optionId: "C", option: "When the patient is not breathing"),

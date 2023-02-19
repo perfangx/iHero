@@ -89,7 +89,7 @@ class GameManagerVM : ObservableObject {
                 
                 hitPoints = max(0, hitPoints - 1)
                                           if (hitPoints == 0){
-//                                              self.hitPoints = 3
+                                              self.hitPoints = 3
                                               //If u used all ur hitpoints then end the level
                                               self.model.quizCompleted = true
                                               self.model.quizWinningStatus = false

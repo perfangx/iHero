@@ -53,6 +53,7 @@ struct OptionCardView: View{
         }   .frame(width: 166,height: 70)
             .background(setBackgroundColor())
             .cornerRadius(8)
+        
     }
     
     func setBackgroundColor() -> Color {
@@ -73,6 +74,7 @@ struct OptinView: View{
           //  Text(quizOption.optionId)
                 
             Text(quizOption.option)
+                .font(.subheadline)
               //  .frame(width: 166,height: 49)
                 .cornerRadius(8)
                 .foregroundColor(.white)
