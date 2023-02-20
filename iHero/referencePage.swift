@@ -756,21 +756,67 @@ var body: some View {
 }
 
 struct SOSNumbers: View {
+
 var body: some View {
-ScrollView{
+    ScrollView{
+        ENhead(TelephoneImage:"telephone",phoneNumber: "112", numberName: "Kingdom Emergency (without the SIM card)")
+        
+        ENhead(TelephoneImage:"telephone",phoneNumber: "911", numberName: " Unified Emergency Number")
 
-        VStack(alignment: .leading , spacing: 4) {
-            Spacer()
-            Text("SOS NUMBERS")
-                .padding()
-          Spacer()
+        ENhead(TelephoneImage:"telephone",phoneNumber: "997", numberName: "Ambulance")
+        
+        ENhead(TelephoneImage:"telephone",phoneNumber: "999", numberName: "Police")
+
+        ENhead(TelephoneImage:"telephone",phoneNumber: "998", numberName: "Civil Defense")
+        
+        ENhead(TelephoneImage:"telephone",phoneNumber: "993", numberName: "Traffic Accidents")
+
+        ENhead(TelephoneImage:"telephone",phoneNumber: "966", numberName: "Natural Disasters")
+      
+            }.toolbarBackground(Color("bgColor"),for: .navigationBar)
         }
-        .foregroundColor(.white)
-    }
-}
-}
+    
+        }
 
+struct ENhead: View{
+var TelephoneImage : String
+var phoneNumber : String
+var numberName : String
 
+var body: some View{
+   
+               VStack{
+                    Text(numberName)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .font(.system(size: 20))
+                        .frame(maxWidth: .infinity, maxHeight: 55,alignment: .leading)
+                        .padding(10)
+                        .background(Color("secBGColor"))
+             
+                    VStack {
+                        Button(action: {
+                            let phone = "tel://"
+                            let phoneNumberformatted = phone + phoneNumber
+                            guard let url = URL(string: phoneNumberformatted) else { return }
+                            UIApplication.shared.open(url)
+                           
+                        }) {
+                            Image(TelephoneImage)
+                                .resizable()
+                                .frame(width:20 ,height:20)
+                                .padding()
+                            Text(phoneNumber)
+                                .font(.title)
+                                .foregroundColor(.blue)
+                         
+                        }
+                    }
+                }
+            
+        }
+    
+        }
 
 struct referencePage_Previews: PreviewProvider {
     static var previews: some View {
