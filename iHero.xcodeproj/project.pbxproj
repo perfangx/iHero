@@ -10,6 +10,7 @@
 		320379202993799800186CE8 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203791F2993799800186CE8 /* MainPage.swift */; };
 		32449AAD299B697D00C22873 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32449AAC299B697D00C22873 /* GameModel.swift */; };
 		32449AAF299B6DF600C22873 /* GameTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32449AAE299B6DF600C22873 /* GameTopics.swift */; };
+		D461F9D329A3576400C10216 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D461F9D529A3576400C10216 /* Localizable.strings */; };
 		D48DB7892998ED2200B0ED60 /* referencePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DB7882998ED2200B0ED60 /* referencePage.swift */; };
 		D4CC9FA42994D91A00B79B3C /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FA32994D91A00B79B3C /* QuizModel.swift */; };
 		D4CC9FA62994DC7300B79B3C /* QuizPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FA52994DC7300B79B3C /* QuizPage.swift */; };
@@ -34,6 +35,7 @@
 		3203791F2993799800186CE8 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		32449AAC299B697D00C22873 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		32449AAE299B6DF600C22873 /* GameTopics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTopics.swift; sourceTree = "<group>"; };
+		D461F9D429A3576400C10216 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D48DB7882998ED2200B0ED60 /* referencePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = referencePage.swift; sourceTree = "<group>"; };
 		D4CC9FA32994D91A00B79B3C /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 		D4CC9FA52994DC7300B79B3C /* QuizPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPage.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				D4CF162329923BEB003922AD /* Assets.xcassets */,
 				D4CF162A29923BEB003922AD /* iHero.xcdatamodeld */,
 				D4CF162529923BEB003922AD /* Preview Content */,
+				D461F9D529A3576400C10216 /* Localizable.strings */,
 			);
 			path = iHero;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = D4CF161329923BEA003922AD;
 			productRefGroup = D4CF161D29923BEA003922AD /* Products */;
@@ -201,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4CF162729923BEB003922AD /* Preview Assets.xcassets in Resources */,
+				D461F9D329A3576400C10216 /* Localizable.strings in Resources */,
 				D4CF162429923BEB003922AD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +240,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D461F9D529A3576400C10216 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D461F9D429A3576400C10216 /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D4CF162D29923BEB003922AD /* Debug */ = {
