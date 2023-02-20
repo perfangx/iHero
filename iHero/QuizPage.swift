@@ -34,7 +34,7 @@ struct QuizPage: View {
                       //  Text(QuizPageTopic)
                      //   Text("\(currentLevel)")
                         // TITLE AND QUESTION
-                        reusableText(title: gameManagerVM.model.quizModel.quizTitle, QuizQuestion: gameManagerVM.model.quizModel.question, progressPrecent: gameManagerVM.progressPrecent )
+                        reusableText(title: gameManagerVM.model.quizModel.quizTitle, QuizQuestion: gameManagerVM.model.quizModel.question, progressPrecent: gameManagerVM.progressPrecent, quizImage: gameManagerVM.model.quizModel.quizImage )
                         //Q OPTIONS
                         OptionGridView(gameManagerVM: gameManagerVM)
                         

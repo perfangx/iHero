@@ -14,6 +14,7 @@ struct reusableText: View {
     var progressPrecent: CGFloat
     var width: CGFloat = 300
     var height: CGFloat = 20
+    var quizImage: String
   //  var size: Int
     var body: some View {
         VStack{
@@ -37,7 +38,8 @@ struct reusableText: View {
                 .padding()
             
             //Q IMAGE
-            Rectangle()
+            Image(quizImage)
+                .resizable()
                 .frame(width: 291,height: 241)
             VStack(alignment: .center){
                 // Q TEXT
