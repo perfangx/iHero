@@ -35,6 +35,20 @@ struct QuizCompletedView: View{
                 
                 HStack{
                     
+                    
+                    Button {
+                        gameManagerVM.restartGame()
+                    } label: {
+                        Text("Play Again")
+                            .frame(width:150  , height:41 )
+                            .foregroundColor(.white)
+                            .background(Color("primaryColor"))
+                            .cornerRadius(8)
+                            .fontWeight(.semibold)
+                            .padding(10)
+                        
+                    }
+                    
                     if (gameManagerVM.model.quizModel.question == GameManagerVM.quizData.last?.question){
                         Text("you reached the end of the game")
                             .font(.title).fontWeight(.bold)
@@ -49,7 +63,7 @@ struct QuizCompletedView: View{
                                 Text("Next Level")
                                     .frame(width:150 , height:41 )
                                     .foregroundColor(.white)
-                                    .background(Color("secondaryColor"))
+                                    .background(Color("lightGreen").opacity(0.8))
                                     .cornerRadius(8)
                                     .fontWeight(.semibold)
                                     .padding(10)
@@ -59,20 +73,10 @@ struct QuizCompletedView: View{
                             }
                         }
                     }
-                    
-                    Button {
-                        gameManagerVM.restartGame()
-                    } label: {
-                        Text("Play Again")
-                            .frame(width:150  , height:41 )
-                            .foregroundColor(.white)
-                            .background(Color("primaryColor"))
-                            .cornerRadius(8)
-                            .fontWeight(.semibold)
-                            .padding(10)
-                        
-                    }
+
                 }.padding()
+                
+                
 //                Button {
 //                    gameManagerVM.restartGame()
 //                } label:  {

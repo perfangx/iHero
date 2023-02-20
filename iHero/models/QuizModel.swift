@@ -22,6 +22,7 @@ struct Quizz {
 //each question
 struct QuizModel {
     var quizTitle: String
+    var quizImage: String
     var quizLevelNum : Int
     var question: String
     var answer: String
