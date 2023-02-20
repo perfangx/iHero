@@ -123,6 +123,7 @@ struct ImageGrid: View {
             }
         }
         .navigationBarBackButtonHidden(true)
+        .accentColor(.white)
     }
 }
 
@@ -161,6 +162,7 @@ struct FirstAidDetailView: View {
                               }
             }
             .navigationBarTitle(titles)
+            .accentColor(.white)
         }
     }
 }

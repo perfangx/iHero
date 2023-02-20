@@ -12,7 +12,8 @@ struct QuizPage: View {
    // var gameManagerVM : GameManagerVM
     var currentLevel : Int = 0
     var QuizPageTopic : String = ""
-    
+    @Environment(\.presentationMode) var presentationMode
+
 //    @State var hitPoints : Int = 5
     //to select buttons
 //    @State var didTap:Bool = false
@@ -36,6 +37,7 @@ struct QuizPage: View {
                         reusableText(title: gameManagerVM.model.quizModel.quizTitle, QuizQuestion: gameManagerVM.model.quizModel.question, progressPrecent: gameManagerVM.progressPrecent )
                         //Q OPTIONS
                         OptionGridView(gameManagerVM: gameManagerVM)
+                        
                         Spacer()
                         
                     }
@@ -47,16 +49,47 @@ struct QuizPage: View {
             ToolbarItem(placement: .principal) {
                 HStack{
                     //X BUTTON
-                    Button{
-                        gameManagerVM.restartGame()
-                    } label: {
-                        NavigationLink(destination:
-                                        Main(gameVM: GameManagerVM())
-                                       , label: { Image(systemName: "xmark.circle")
-                            .foregroundColor(.white)})
-                       
-                    }
-                  
+                    //                    Button{
+                    //                        self.gameManagerVM.restartGame()
+                                            
+                    //                    } label: {
+                                        //-----
+                    //                    NavigationLink(destination: Main(gameVM: GameManagerVM())) {
+                    //                        Image(systemName: "xmark.circle")
+                    //                            .foregroundColor(.white)
+                    //                    }
+                    //                    .onDisappear {
+                    //                        self.gameManagerVM.restartGame()
+                    //                    }
+                                        //-------
+                                        Button(action: {
+                                            self.gameManagerVM.restartGame()
+                                            self.presentationMode.wrappedValue.dismiss()
+                                        }) {
+                                            Image(systemName: "xmark.circle")
+                                                .foregroundColor(.white)
+                                        }
+
+                    //                        NavigationLink(destination:
+                    //                                        Main(gameVM: GameManagerVM())
+                    //                                       , label: { Image(systemName: "xmark.circle")
+                    //                            .foregroundColor(.white)})
+                                           
+                    //                    }
+                    
+//      *********************************************
+                    
+//                    //X BUTTON
+//                    Button{
+//                        gameManagerVM.restartGame()
+//                    } label: {
+//                        NavigationLink(destination:
+//                                        Main(gameVM: GameManagerVM())
+//                                       , label: { Image(systemName: "xmark.circle")
+//                            .foregroundColor(.white)})
+//
+//                    }
+//
                     Spacer()
                   //HEART COUNTS
                         Image(systemName: "heart.fill")
@@ -153,3 +186,4 @@ struct QuizPage_Previews: PreviewProvider {
         QuizPage(gameManagerVM: GameManagerVM())
     }
 }
+
