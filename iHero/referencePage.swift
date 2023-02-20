@@ -149,12 +149,14 @@ struct FirstAidDetailView: View {
                                   Choking()
                               case "Burns":
                                   Burns()
-                              case "Abnormal Sugar level":
+                              case "Diabetes":
                                   Abnormal_Sugar_Level()
                               case "Stroke":
                                   Stroke()
                               case"Nose Bleeds":
                                   NoseBleeds()
+                              case "CPR":
+                                  CPR()
                               default:
                                   Text("No information available.")
                               }
@@ -165,7 +167,7 @@ struct FirstAidDetailView: View {
     }
 }
 
-//MARK: this struct for Other topics section
+//MARK: this struct for Other topics section.
 struct OtherDetailView: View {
     let images: String
     let titles: String
@@ -176,16 +178,25 @@ struct OtherDetailView: View {
                 .ignoresSafeArea()
             
             VStack {
+                switch titles {
+                case "Acknowledgment" :
+                    Acknowledgment()
+                case "SOS Numbers":
+                    SOSNumbers()
+                    
+                default:
+                    Text("No information available.")
+                }
             
-//                Image(images)
-//                    .resizable()
-//                    .aspectRatio(contentMode: .fit)
-//
-//                Text(titles)
-//                    .font(.largeTitle)
-//                    .fontWeight(.bold)
-//                    .padding(.top, 20)
-           
+                    //                Image(images)
+                    //                    .resizable()
+                    //                    .aspectRatio(contentMode: .fit)
+                    //
+                    //                Text(titles)
+                    //                    .font(.largeTitle)
+                    //                    .fontWeight(.bold)
+                    //                    .padding(.top, 20)
+                
             }
             .navigationBarTitle(titles)
             .accentColor(.white)
@@ -649,11 +660,77 @@ struct NoseBleeds: View {
     }
 }
 
+struct CPR: View {
+    var body: some View {
+        
+        ScrollView{
+            
+            VStack(alignment: .leading , spacing: 4) {
+                Group{
+                    Text("First aid procedure for CPR:")
+                        .font(.system(size: 24,weight: .bold))
+                        .foregroundColor(.white)
+                        .padding(.bottom, 10)
+                    
+                    Text("Every human being is at risk of having a heart stop for some reason.The possibility of saving a person whose heart stopped depends on the first person who witnessed what happened. Every minute you pass the patient without ambulance reduces the chances of the patient surviving , so time here means the difference between life and death.\nThe human brain and heart cannot withstand the interruption of blood and oxygen for more than (6) six minutes, as the cells of the brain and heart begin to die after the passage of these six minutes.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,10)
+                    Text("What is CPR?:")
+                        .font(.system(size: 22,weight: .bold))
+                        .foregroundColor(.white)
+                        .padding(.bottom, 10)
+                    
+                    Text("CPR is a double process in which the medic resuscitates the lung and heart. The resuscitation of the lung is done through the delivery of air and oxygen to it through ventilation, and the resuscitation of the heart is done by manual pressure on the affected person heart area (in the area between the thoracic bone and the spine) so that blood is pumped to the vital parts of the affected person body, especially the brain.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,10)
+                }
+                Group{
+                    Text("What causes CPR?")
+                        .font(.system(size: 22,weight: .bold))
+                        .foregroundColor(.white)
+                        .padding(.bottom, 10)
 
+                    Text("1.Diseases,heart problems,heart attack.\n2.Diseases,respiratory problems.\n3.Electric shock.\n4.Poisoning.\n5.Drowning,choking.\n6.Cardiac arrest.\n7.Acute bleeding,or severe trauma.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,10)
+                    
+                    Text("First aid procedure for CPR")
+                        .font(.system(size: 22,weight: .bold))
+                        .foregroundColor(.white)
+                        .padding(.bottom, 10)
+
+                    Text("1.Make sure you are in a safe position if you approach the patient, beware that you yourself become infected.\n2.Try to see if the patient is able to respond or not, and try to wake him up by shrugging and calling him loud and close to his ears.\n3.Ask for help from those around you or from passage. Ask for help even if you don't see anyone near you. If someone responds to a request for help, I ask them to wait near you until you assess the patient condition.\n4.Put the patient on the ground or hard surface and remove any pillows under his head. Be careful if you are dealing with an injured person who has lost consciousness after hitting something.\n5.Make sure the respiratory stream is open, use a head tilt method and chin lift, follow the following steps:")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,10)
+                    
+                    
+
+                    Text("1.Place two fingers from one of your hands under the injured person's chin and lift his head upwards.\n2.Put your other palm on the injured forehead and press down.\n3.Look inside the patient to make sure his mouth is free of any foreign object, artificial teeth.\n4.If the patient suffers from trauma or bruising, you should avoid moving his neck and try to open the respiratory tract by pressing the jaw.\n5.Check for 10 seconds whether or not the patient  is breathing in the following ways:")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,20)
+                    Text("•Check considering the observation of the height and drop of the chest.\n•Hearing check by placing your ear in close proximity to the injured person's mouth and nose.\n•Check the sensation so that you feel the exhaled on your cheek.")
+                        .foregroundColor(.white)
+                        .font(.system(size:18))
+                        .padding(.leading,25)
+
+                    
+                
+                }
+                
+                
+            }.padding(.leading,20)
+        }.toolbarBackground(Color("bgColor"),for: .navigationBar)
+    }
+}
 
 struct referencePage: View {
     let images = ["firstAidKitImage","chokingImage","bleedingImage","cbrImage","blood sugar","Burns" ,"Nosebleeds" ,"Stroke" ]
-    let titles = ["First Aid Kit", "Choking", "Bleeding", "CBR", "Abnormal Sugar level" , "Burns" , "Nose Bleeds", "Stroke" ]
+    let titles = ["First Aid Kit", "Choking", "Bleeding", "CPR", "Diabetes" , "Burns" , "Nose Bleeds", "Stroke" ]
     
     let otherImages = ["sosImage" , "acknowledgmentImage"]
     let otherTitles = ["SOS Numbers" , "Acknowledgment"]
