@@ -24,7 +24,7 @@ class GameManagerVM : ObservableObject {
     @Published var hasSeenAd = false
 
     static let userDefaults = UserDefaults.standard
-    @Published var hitPoints : Int = 3 {
+    @AppStorage("hitPoints") var hitPoints : Int = 3 {
            didSet {
                // Save hit points to UserDefaults
                GameManagerVM.userDefaults.set(hitPoints, forKey: "hitPoints")
@@ -40,12 +40,12 @@ class GameManagerVM : ObservableObject {
        
     }
  
-    init() {
-        // Load hit points from UserDefaults
-        if let savedHitPoints = GameManagerVM.userDefaults.object(forKey: "hitPoints") as? Int {
-            hitPoints = savedHitPoints
-        }
-    }
+//    init() {
+//        // Load hit points from UserDefaults
+//        if let savedHitPoints = GameManagerVM.userDefaults.object(forKey: "hitPoints") as? Int {
+//            hitPoints = savedHitPoints
+//        }
+//    }
 
     
     func verifyAnswer(selectedOption: QuizOption){
