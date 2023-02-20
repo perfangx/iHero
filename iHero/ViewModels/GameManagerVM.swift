@@ -11,7 +11,8 @@ import Foundation
 import SwiftUI
 
 class GameManagerVM : ObservableObject {
-    
+   // @ObservedObject var reward = Reward()
+
     static var levelStartIndex = 0
     static var levelQ = 0
     static var currentIndex = 0
@@ -121,6 +122,7 @@ class GameManagerVM : ObservableObject {
     }
     
     func restartGame(){
+//        reward.ShowReward()
         GameManagerVM.levelQ = 0
         self.progressPrecent = 0
 //        if ((GameManagerVM.levelStartIndex == 3)||(GameManagerVM.levelStartIndex == 0)){

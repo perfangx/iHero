@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct QuizCompletedView: View{
+    @ObservedObject var reward = Reward()
+
     var gameManagerVM: GameManagerVM
     var body: some View{
       
@@ -61,6 +63,7 @@ struct QuizCompletedView: View{
                     }
                     
                     Button {
+                        reward.ShowReward()
                         gameManagerVM.restartGame()
                     } label: {
                         Text("Play Again")
@@ -72,6 +75,10 @@ struct QuizCompletedView: View{
                             .padding(10)
                         
                     }
+                    .onAppear() {
+                        reward.LoadReward()
+                    }
+                    .disabled(!reward.rewardLoaded)
                 }.padding()
 //                Button {
 //                    gameManagerVM.restartGame()

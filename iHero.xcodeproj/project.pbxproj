@@ -10,6 +10,7 @@
 		320379202993799800186CE8 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3203791F2993799800186CE8 /* MainPage.swift */; };
 		32449AAD299B697D00C22873 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32449AAC299B697D00C22873 /* GameModel.swift */; };
 		32449AAF299B6DF600C22873 /* GameTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32449AAE299B6DF600C22873 /* GameTopics.swift */; };
+		B6F98F8BF36C9C487AF38213 /* Pods_iHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FEFF848470F3B1B7DA342B1 /* Pods_iHero.framework */; };
 		D48DB7892998ED2200B0ED60 /* referencePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DB7882998ED2200B0ED60 /* referencePage.swift */; };
 		D4CC9FA42994D91A00B79B3C /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FA32994D91A00B79B3C /* QuizModel.swift */; };
 		D4CC9FA62994DC7300B79B3C /* QuizPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CC9FA52994DC7300B79B3C /* QuizPage.swift */; };
@@ -25,6 +26,7 @@
 		D4CF162929923BEB003922AD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF162829923BEB003922AD /* Persistence.swift */; };
 		D4CF162C29923BEB003922AD /* iHero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4CF162A29923BEB003922AD /* iHero.xcdatamodeld */; };
 		E050A6EF299FF970005C6ADB /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E050A6EE299FF970005C6ADB /* SplashScreenView.swift */; };
+		E0E9CA1729A3576400E343A9 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E9CA1629A3576400E343A9 /* Reward.swift */; };
 		F4C9AC3A299E256D0039A986 /* SingleOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C9AC39299E256D0039A986 /* SingleOnboardingView.swift */; };
 		F4C9AC3C299E25EE0039A986 /* onboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C9AC3B299E25EE0039A986 /* onboardingView.swift */; };
 		F4C9AC3E299E264E0039A986 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C9AC3D299E264E0039A986 /* Sheet.swift */; };
@@ -34,6 +36,9 @@
 		3203791F2993799800186CE8 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		32449AAC299B697D00C22873 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		32449AAE299B6DF600C22873 /* GameTopics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTopics.swift; sourceTree = "<group>"; };
+		6FEFF848470F3B1B7DA342B1 /* Pods_iHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91768049EE1CB73CBF736389 /* Pods-iHero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHero.debug.xcconfig"; path = "Target Support Files/Pods-iHero/Pods-iHero.debug.xcconfig"; sourceTree = "<group>"; };
+		95A3DF012E4D588702434A4B /* Pods-iHero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iHero.release.xcconfig"; path = "Target Support Files/Pods-iHero/Pods-iHero.release.xcconfig"; sourceTree = "<group>"; };
 		D48DB7882998ED2200B0ED60 /* referencePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = referencePage.swift; sourceTree = "<group>"; };
 		D4CC9FA32994D91A00B79B3C /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 		D4CC9FA52994DC7300B79B3C /* QuizPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPage.swift; sourceTree = "<group>"; };
@@ -50,6 +55,8 @@
 		D4CF162829923BEB003922AD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D4CF162B29923BEB003922AD /* iHero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iHero.xcdatamodel; sourceTree = "<group>"; };
 		E050A6EE299FF970005C6ADB /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		E0E9CA1629A3576400E343A9 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
+		E0E9CA1829A35BFD00E343A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F4C9AC39299E256D0039A986 /* SingleOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleOnboardingView.swift; sourceTree = "<group>"; };
 		F4C9AC3B299E25EE0039A986 /* onboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingView.swift; sourceTree = "<group>"; };
 		F4C9AC3D299E264E0039A986 /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
@@ -60,12 +67,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F98F8BF36C9C487AF38213 /* Pods_iHero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		927F1DC16C056A4B2B61A2A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91768049EE1CB73CBF736389 /* Pods-iHero.debug.xcconfig */,
+				95A3DF012E4D588702434A4B /* Pods-iHero.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D4CC9FA22994D8FA00B79B3C /* models */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +117,8 @@
 			children = (
 				D4CF161E29923BEA003922AD /* iHero */,
 				D4CF161D29923BEA003922AD /* Products */,
+				927F1DC16C056A4B2B61A2A7 /* Pods */,
+				F4EAB20CA2C7E3A200377ECE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,9 +133,11 @@
 		D4CF161E29923BEA003922AD /* iHero */ = {
 			isa = PBXGroup;
 			children = (
+				E0E9CA1829A35BFD00E343A9 /* Info.plist */,
 				D4CF161F29923BEA003922AD /* iHeroApp.swift */,
 				D4CF162129923BEA003922AD /* ContentView.swift */,
 				F4C9AC39299E256D0039A986 /* SingleOnboardingView.swift */,
+				E0E9CA1629A3576400E343A9 /* Reward.swift */,
 				E050A6EE299FF970005C6ADB /* SplashScreenView.swift */,
 				F4C9AC3B299E25EE0039A986 /* onboardingView.swift */,
 				D48DB7882998ED2200B0ED60 /* referencePage.swift */,
@@ -142,6 +163,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F4EAB20CA2C7E3A200377ECE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FEFF848470F3B1B7DA342B1 /* Pods_iHero.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4CF162F29923BEB003922AD /* Build configuration list for PBXNativeTarget "iHero" */;
 			buildPhases = (
+				B38C076F972757A4B4CDF5CF /* [CP] Check Pods Manifest.lock */,
 				D4CF161829923BEA003922AD /* Sources */,
 				D4CF161929923BEA003922AD /* Frameworks */,
 				D4CF161A29923BEA003922AD /* Resources */,
+				BB395CE825F82AEB30332FC6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,6 +238,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B38C076F972757A4B4CDF5CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iHero-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB395CE825F82AEB30332FC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iHero/Pods-iHero-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iHero/Pods-iHero-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iHero/Pods-iHero-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D4CF161829923BEA003922AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -216,6 +289,7 @@
 				320379202993799800186CE8 /* MainPage.swift in Sources */,
 				D4CF162929923BEB003922AD /* Persistence.swift in Sources */,
 				F4C9AC3E299E264E0039A986 /* Sheet.swift in Sources */,
+				E0E9CA1729A3576400E343A9 /* Reward.swift in Sources */,
 				D4CC9FB3299530BB00B79B3C /* gameQuestions.swift in Sources */,
 				D48DB7892998ED2200B0ED60 /* referencePage.swift in Sources */,
 				F4C9AC3A299E256D0039A986 /* SingleOnboardingView.swift in Sources */,
@@ -353,6 +427,7 @@
 		};
 		D4CF163029923BEB003922AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91768049EE1CB73CBF736389 /* Pods-iHero.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -362,6 +437,7 @@
 				DEVELOPMENT_TEAM = DLY9DRQ866;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iHero/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -382,6 +458,7 @@
 		};
 		D4CF163129923BEB003922AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95A3DF012E4D588702434A4B /* Pods-iHero.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -391,6 +468,7 @@
 				DEVELOPMENT_TEAM = DLY9DRQ866;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iHero/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
