@@ -1,0 +1,6 @@
+framework module Pods_iHero {
+  umbrella header "Pods-iHero-umbrella.h"
+
+  export *
+  module * { export * }
+}
