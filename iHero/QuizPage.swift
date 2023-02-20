@@ -16,6 +16,7 @@ struct QuizPage: View {
 //    @State var hitPoints : Int = 5
     //to select buttons
 //    @State var didTap:Bool = false
+    //r
     var body: some View {
         NavigationView(){
             ZStack{
