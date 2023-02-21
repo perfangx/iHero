@@ -63,6 +63,7 @@ struct QuizPage: View {
                     //                    }
                                         //-------
                                         Button(action: {
+                                            self.gameManagerVM.resetProcess()//i added from hajer's page
                                             self.gameManagerVM.restartGame()
                                             self.presentationMode.wrappedValue.dismiss()
                                         }) {

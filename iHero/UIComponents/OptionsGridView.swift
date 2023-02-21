@@ -50,7 +50,9 @@ struct OptionCardView: View{
 //            } else {
                 OptinView(quizOption: quizOption)
 //            }
-        }   .frame(width: 166,height: 70)
+        }   .padding(.leading, 8)
+            .padding(.trailing, 8)
+            .frame(width: 166,height: 70)
             .background(setBackgroundColor())
             .cornerRadius(8)
         
@@ -67,6 +69,15 @@ struct OptionCardView: View{
     }
 }
 
+extension String{
+    var wordCount:Int{
+        let chararacter = CharacterSet.whitespacesAndNewlines.union(.punctuationCharacters)
+        let comps = components(separatedBy: chararacter)
+        let words = comps.filter { !$0.isEmpty }
+        return words.count
+    }
+}
+
 struct OptinView: View{
     var quizOption: QuizOption
     var body: some View{
@@ -74,12 +85,15 @@ struct OptinView: View{
           //  Text(quizOption.optionId)
                 
             Text(quizOption.option)
+                .font(.system(size: quizOption.option.wordCount>10 ? 10 : 14))
                 .font(.subheadline)
-              //  .frame(width: 166,height: 49)
                 .cornerRadius(8)
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
+              //  .frame(width: 166,height: 49)
+                
+               // .fixedSize(horizontal: false, vertical: true)
+                
         }
     }
 }

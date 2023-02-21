@@ -266,7 +266,10 @@ struct Bleeding: View {
                         .font(.system(size:18))
                 }
             }.padding(.leading,20)
+                
         }.toolbarBackground(Color("bgColor"),for: .navigationBar)
+            
+            
     }
 }
 

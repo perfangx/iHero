@@ -10,6 +10,7 @@ import SwiftUI
 
 struct QuizCompletedView: View{
     var gameManagerVM: GameManagerVM
+    @Environment(\.presentationMode) var presentationMode
     var body: some View{
       
             VStack{
@@ -38,6 +39,7 @@ struct QuizCompletedView: View{
                     
                     Button {
                         gameManagerVM.restartGame()
+                        presentationMode.wrappedValue.dismiss()
                     } label: {
                         Text("Play Again")
                             .frame(width:150  , height:41 )

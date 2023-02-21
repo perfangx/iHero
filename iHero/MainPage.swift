@@ -24,7 +24,7 @@ struct Main: View {
                     VStack{
                         Spacer()
                         Spacer()
-                        ForEach(0..<gameVM.theGame.count){ ii in
+                        ForEach(0..<gameVM.theGame.count, id: \.self){ ii in
                             div(theDivTopic: gameVM.theGame[ii].topic, theNumOfLevels: gameVM.theGame[ii].levels, theColor: gameVM.theGame[ii].color)
                             
                         }
