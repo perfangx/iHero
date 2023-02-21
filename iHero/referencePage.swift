@@ -198,7 +198,7 @@ struct OtherDetailView: View {
     }
 }
 
-
+//i stopped fixing the spacing in burns struct
 
 struct Bleeding: View {
     var body: some View {
@@ -213,18 +213,22 @@ struct Bleeding: View {
                     Text("Symptoms and signs , Not all may be present:")
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight: .bold))
+                        .padding(.bottom,5)
                     Text("1.a wound with, or without, an embedded foreign object\n2.pain from skin surface wounds\n3.bruising or discolouration of the skin\n4.loss of normal function in the injured area\n5.pale, cold,sweaty skin")
                         .foregroundColor(.white)
                         .font(.system(size:18))
+                        .padding(.bottom,10)
                     Text("The procedure:")
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight: .bold))
+                        .padding(.bottom,5)
                     Text("1.Apply direct pressure to the bleeding wound:")
                         .foregroundColor(.white)
                         .font(.system(size: 18,weight: .bold))
                     Text("•Apply firm pressure over the wound. Use a sterile or clean bulky pad and apply it firmly with hand pressure. Apply a bandage to keep the dressing in place.\n•If bleeding is severe, DO NOT waste time looking for suitable padding, but be prepared to use the patient’s hand or your hand to hold the wound together if the patient is unable to do this unaided.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
+                        .padding(.bottom,10)
                     // .multilineTextAlignment(.center)
                     Text("2.Raise the injured area:")
                         .foregroundColor(.white)
@@ -232,6 +236,8 @@ struct Bleeding: View {
                     Text("•If the wound is on a limb, raise it in a supported position to reduce blood flow to the injured area.\n•If an arm is injured, you could apply an arm sling or elevation sling.\n•Try to avoid any direct contact with the patient’s blood or other body fluids. Use disposable gloves if possible. If gloves are not available, place your hands inside a plastic bag.\n•If there has been any contact with blood or any other body fluids, wash your hands or any blood splashed on the skin thoroughly with soap and water as soon as possible after the incident.\n•If you are concerned about a possible risk of infection, obtain advice from your doctor as soon as possible.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
+                        .padding(.bottom,10)
+                        
                 }
                 Group{
                     Text("3.If a foreign body is embedded in the wound:")
@@ -240,18 +246,21 @@ struct Bleeding: View {
                     Text("•DO NOT remove it but apply padding on either side of the object and build it up to avoid pressure on the foreign body.\n•Hold the padding firmly in place with a roller bandage or folded triangular bandage applied in a criss-cross method to avoid pressure on the object.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
+                        .padding(.bottom,10)
                     Text("4.Keep the patient at total rest:")
                         .foregroundColor(.white)
                         .font(.system(size: 18,weight: .bold))
                     Text("•Even if the injury involves the arm or upper part of the body, the patient should rest in a position of greatest comfort for at least 10 minutes to help control the bleeding.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
+                        .padding(.bottom,10)
                     Text("5.Seek medical assistance:")
                         .foregroundColor(.white)
                         .font(.system(size: 18,weight: .bold))
                     Text("•If the wound appears to be minor and the patient is able to travel by car, arrange an urgent appointment with a local doctor to assess and treat the injury.\n•If the injury is severe or the patient is very unwell – call 997 or 911 for an ambulance as soon as possible.\n•While waiting for an ambulance to arrive, observe the patient closely for any change in condition.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
+                        .padding(.bottom,10)
                     Text("6.If blood leaks through the pressure pad and bandage:")
                         .foregroundColor(.white)
                         .font(.system(size: 18,weight: .bold))
@@ -260,6 +269,8 @@ struct Bleeding: View {
                         .font(.system(size:18))
                 }
             }.padding(.leading,20)
+                .frame(maxWidth: 350, maxHeight: .infinity)
+                
             
         }.toolbarBackground(Color("bgColor"),for: .navigationBar)
         
@@ -291,6 +302,7 @@ struct FirstAidKit: View {
                 
                 
             }.padding(.leading,20)
+                .frame(maxWidth: 350, maxHeight: .infinity)
         }.toolbarBackground(Color("bgColor"),for: .navigationBar)
     }
 }
@@ -301,7 +313,7 @@ struct Choking: View {
         ScrollView{
             
             VStack(alignment: .leading , spacing: 4) {
-                Text("First aid procedure for  choking:")
+                Text("First aid for choking:")
                     .font(.system(size: 24,weight: .bold))
                     .foregroundColor(.white)
                     .padding(.bottom, 10)
@@ -311,15 +323,19 @@ struct Choking: View {
                 Text("Asphyxiation occurs when a foreign object gets stuck in the throat or trachea so that it impedes the passage of air, often due to food causing in adults, and swallows small objects to young children.")
                     .foregroundColor(.white)
                     .font(.system(size:18))
+                    .padding(.bottom,10)
                 Text("Symptoms:")
                     .foregroundColor(.white)
                     .font(.system(size: 20,weight: .bold))
+                    .padding(.bottom,5)
                 Text("•Holding the throat with the hands.\n•Inability to speak.\n•Difficulty breathing or breathing accompanied by sound.\n•Whistling when trying to breathe.\n•Weak or strong cough.\n•Skin color and lips turned blue.\n•Loss of consciousness.")
                     .foregroundColor(.white)
                     .font(.system(size:18))
+                    .padding(.bottom,10)
                 Text("The procedure:")
                     .foregroundColor(.white)
                     .font(.system(size: 20,weight: .bold))
+                    .padding(.bottom,5)
                 Text("•If a person is able to breathe strongly, they have to keep coughing.\n•If a person is asphyxiated and unable to speak, cry or laugh hard, the following must be done:")
                     .foregroundColor(.white)
                     .font(.system(size:18))
@@ -330,6 +346,7 @@ struct Choking: View {
                 
                 
             }.padding(.leading,20)
+                .frame(maxWidth: 350, maxHeight: .infinity)
         }.toolbarBackground(Color("bgColor"),for: .navigationBar)
     }
 }
@@ -351,20 +368,25 @@ struct Burns: View {
                     Text("It is tissue damage caused by skin exposure to fire, prolonged exposure to sunlight or other radiation, as well as contact with incendiary surfaces, or chemicals.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
+                        .padding(.bottom,10)
                     
                     Text("First degree burns (light):")
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight: .bold))
+                        .padding(.bottom,5)
                     Text("Ambulatory procedures:")
                         .foregroundColor(.white)
                         .font(.system(size: 20))
                         .padding(.leading,10)
+                        .padding(.bottom,5)
                     
                     
                     Text("•Cooling the burn to help calm the pain by placing the burned area underneath the running water of the tap and moderate cold for 10 to 15 minutes to relieve the pain.\n•Remove accessories (such as: rings, watches or belts) if any or remove shoes or any clothes gently and quickly, before the area enlarges.\n•Cover the burning area using wet bandage or cool clean cloth, to reduce the risk of infection.\n•Take the painkiller if necessary so as to relieve the pain.\n•Immediately seek help if the burns are severe and extend wide areas, or if you notice signs of infection such as increased pain, redness and swelling.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
+                        .padding(.bottom,10)
+                    //i stopped here
                     Text("Wrong behaviors:")
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight: .bold))
@@ -442,6 +464,7 @@ struct Abnormal_Sugar_Level: View {
                     Text("Diabetes is a chronic disease that occurs either when the pancreas does not produce enough insulin or when the body cannot effectively use the insulin it produces. Insulin is a hormone that regulates blood glucose. Hyperglycaemia, also called raised blood glucose or raised blood sugar.\n•Glucose: The carbohydrates and sugars in what you eat and drink turns into glucose (sugar) in the stomach and digestive system. Glucose can then enter the bloodstream.\n•Insulin: Insulin is a hormone made in the pancreas that helps the body’s cells take up glucose from blood and lower blood sugar levels.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
+                        .padding(.bottom,10)
                     Text("Types of diabetes:")
                         .font(.system(size: 22,weight: .bold))
                         .foregroundColor(.white)
@@ -451,12 +474,14 @@ struct Abnormal_Sugar_Level: View {
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight: .bold))
                         .padding(.leading,10)
+                        .padding(.bottom,5)
                     
                     
                     Text("This type of diabetes is also referred to as insulin-dependent diabetes. People with Type 1 diabetes must take insulin or other medications daily. This makes up for the insulin not being produced by the body.\nType 1 diabetes develops when the body’s immune system attacks and destroys cells in the pancreas that make insulin.\nOnce these cells are destroyed, the pancreas produces little or no insulin, so glucose stays in the blood. When there’s too much glucose in the blood, especially for prolonged periods, the organ systems in the body suffer long-term damage.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
+                        .padding(.bottom,10)
                     
                 }
                 Group{
@@ -464,11 +489,13 @@ struct Abnormal_Sugar_Level: View {
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight: .bold))
                         .padding(.leading,10)
+                        .padding(.bottom,5)
                     
                     Text("Type 2 diabetes is the most common form of diabetes. Type 2 diabetes has historically been diagnosed primarily in adults. But adolescents and young adults are developing Type 2 diabetes at an alarming rate because of family history and higher rates of obesity and physical inactivity — risk factors for Type 2 diabetes, In Type 2 diabetes, glucose builds up in the blood instead of going into cells\nThis type of diabetes can occur when:\n•The body develops “insulin resistance” and can’t efficiently use the insulin it makes.\n•The pancreas gradually loses its capacity to produce insulin.\nType 2 diabetes may be delayed or controlled with diet and exercise.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
+                        .padding(.bottom,10)
                 }
                 
                 Group{
@@ -484,16 +511,19 @@ struct Abnormal_Sugar_Level: View {
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
+                        .padding(.bottom,10)
                     
                     Text("Tips for Success:")
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight:.bold))
                         .padding(.leading,10)
+                        .padding(.bottom,5)
                     
                     Text("•Eat Smart:\nEat a healthy diet of vegetables, fruits, whole grains, beans, legumes, nuts, plant-based proteins, lean animal proteins like fish and seafood. Limit sugary foods and drinks, red or processed meats, salty foods, refined carbohydrates and highly processed foods.\n•Move More:\nBeing physically active can lower your risk of developing diabetes and help you manage the disease if you already have it.\n•Manage Weight:\nStay at a healthy weight to help prevent, delay or manage diabetes.\n•No Nicotine:\nSmoking, vaping, exposure to secondhand smoke or using tobacco can increase your risk of heart disease, stroke, many cancers and other chronic diseases. It may also make prediabetes and diabetes harder to manage.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
+                        .padding(.bottom,10)
                 }
                 Group{
                     Text("First Aid for Low Sugar Attack:")
@@ -505,21 +535,25 @@ struct Abnormal_Sugar_Level: View {
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight:.bold))
                         .padding(.leading,10)
+                        .padding(.bottom,5)
                     
                     Text("Follow the rule of 15 15 15\n1.15 grams of fast-absorbing sugars such as half a cup of juice, a spoon of honey or 3 spoons of sugar dissolved in water.\n2. After 15 minutes, blood sugar is measured if the result is higher or equal to 70, the infected person is given 15 grams of carbohydrates.\n3. If blood sugar is less than 70,  redo one step, until the blood sugar rises to 70 or more, and then the injured person is given a snack.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
+                        .padding(.bottom,10)
                     
                     Text("If the patient is conscious:")
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight:.bold))
                         .padding(.leading,10)
+                        .padding(.bottom,5)
                     
                     Text("The patient is injected with glucagon injection after 15 to 20 minutes. Blood sugar will rise and a snack will be taken. If the injection is not available, the patient should be hospitalized as soon as possible.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
+                        .padding(.bottom,10)
                 }
                 Group{
                     Text("First Aid for High Sugar Attack:")
@@ -531,17 +565,19 @@ struct Abnormal_Sugar_Level: View {
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight:.bold))
                         .padding(.leading,10)
+                        .padding(.bottom,5)
                     
                     Text("1.Thirst.\n2.The patient feels dry in the throat.\n3.A low heart rate of less than 100 per minute.\n4.Feeling tired.\n5.Unaware.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
+                        .padding(.bottom,10)
                     
                     Text("Procedures:")
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight:.bold))
                         .padding(.leading,10)
-                    
+                        .padding(.bottom,5)
                     Text("1.Drink water in quantity\n2.Take the medicine.\n3.Go to the hospital.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
@@ -662,17 +698,19 @@ struct CPR: View {
         
         ScrollView{
             
-            VStack(alignment: .leading , spacing: 4) {
+            VStack(alignment: .leading , spacing: 5) {
                 Group{
                     Text("First aid procedure for CPR:")
                         .font(.system(size: 24,weight: .bold))
                         .foregroundColor(.white)
                         .padding(.bottom, 10)
+                        .foregroundColor(Color("secBGColor"))
                     
                     Text("Every human being is at risk of having a heart stop for some reason.The possibility of saving a person whose heart stopped depends on the first person who witnessed what happened. Every minute you pass the patient without ambulance reduces the chances of the patient surviving , so time here means the difference between life and death.\nThe human brain and heart cannot withstand the interruption of blood and oxygen for more than (6) six minutes, as the cells of the brain and heart begin to die after the passage of these six minutes.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,10)
+                        .padding(.bottom,15)
                     Text("What is CPR?:")
                         .font(.system(size: 22,weight: .bold))
                         .foregroundColor(.white)
@@ -682,6 +720,7 @@ struct CPR: View {
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,10)
+                        .padding(.bottom,15)
                 }
                 Group{
                     Text("What causes CPR?")
@@ -693,6 +732,7 @@ struct CPR: View {
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,10)
+                        .padding(.bottom,15)
                     
                     Text("First aid procedure for CPR")
                         .font(.system(size: 22,weight: .bold))
@@ -721,6 +761,7 @@ struct CPR: View {
                 
                 
             }.padding(.leading,20)
+                .frame(maxWidth: 350, maxHeight: .infinity)
         }.toolbarBackground(Color("bgColor"),for: .navigationBar)
     }
 }
