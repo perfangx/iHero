@@ -5,6 +5,7 @@ struct ImageGrid: View {
     let titles: [String]
     let otherImages: [String]
     let otherTitles: [String]
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         NavigationView{
             ZStack{
@@ -91,34 +92,27 @@ struct ImageGrid: View {
                             
                         }
                         .padding(.trailing,180)
-                   
+                        
                     }
-                                        .navigationBarTitleDisplayMode(.inline)
-                                        .toolbarBackground(Color("bgColor"))
-                                        
-                    
-                                        .toolbar{
-                                            ToolbarItem(placement: .principal)
-                                            {
-                                                Text("Read More")
-                                                    .fontWeight(.bold)
-                                                    .font(.title)
-                                                    .foregroundColor(.white)
-                                            }
-                                            ToolbarItem(placement: .navigationBarLeading){
-                                                Button{
-                                                  
-                                                } label: {
-                                                    NavigationLink(destination:
-                                                                    Main(gameVM: GameManagerVM())
-                                                                   , label: { Image(systemName: "chevron.backward")
-                                                        .foregroundColor(.white)})
-                                                   
-                                                }
-                                                
-                                            }
-                                        }
-                    
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbarBackground(Color("bgColor"))
+                    .toolbar{
+                        ToolbarItem(placement: .principal)
+                        {
+                            Text("Read More")
+                                .fontWeight(.bold)
+                                .font(.title)
+                                .foregroundColor(.white)
+                        }
+                        ToolbarItem(placement: .navigationBarLeading){
+                            Button{
+                                self.presentationMode.wrappedValue.dismiss()
+                            }  label: { Image(systemName: "chevron.backward")
+                                .foregroundColor(.white)}
+                            
+                        }
+                    }
+
                 }
             }
         }
@@ -141,25 +135,25 @@ struct FirstAidDetailView: View {
             VStack {
                 
                 switch titles {
-                              case "Bleeding":
-                                  Bleeding()
-                              case "First Aid Kit":
-                                  FirstAidKit()
-                              case "Choking":
-                                  Choking()
-                              case "Burns":
-                                  Burns()
-                              case "Diabetes":
-                                  Abnormal_Sugar_Level()
-                              case "Stroke":
-                                  Stroke()
-                              case"Nose Bleeds":
-                                  NoseBleeds()
-                              case "CPR":
-                                  CPR()
-                              default:
-                                  Text("No information available.")
-                              }
+                case "Bleeding":
+                    Bleeding()
+                case "First Aid Kit":
+                    FirstAidKit()
+                case "Choking":
+                    Choking()
+                case "Burns":
+                    Burns()
+                case "Diabetes":
+                    Abnormal_Sugar_Level()
+                case "Stroke":
+                    Stroke()
+                case"Nose Bleeds":
+                    NoseBleeds()
+                case "CPR":
+                    CPR()
+                default:
+                    Text("No information available.")
+                }
             }
             .navigationBarTitle(titles)
             .accentColor(.white)
@@ -187,15 +181,15 @@ struct OtherDetailView: View {
                 default:
                     Text("No information available.")
                 }
-            
-                    //                Image(images)
-                    //                    .resizable()
-                    //                    .aspectRatio(contentMode: .fit)
-                    //
-                    //                Text(titles)
-                    //                    .font(.largeTitle)
-                    //                    .fontWeight(.bold)
-                    //                    .padding(.top, 20)
+                
+                //                Image(images)
+                //                    .resizable()
+                //                    .aspectRatio(contentMode: .fit)
+                //
+                //                Text(titles)
+                //                    .font(.largeTitle)
+                //                    .fontWeight(.bold)
+                //                    .padding(.top, 20)
                 
             }
             .navigationBarTitle(titles)
@@ -266,10 +260,10 @@ struct Bleeding: View {
                         .font(.system(size:18))
                 }
             }.padding(.leading,20)
-                
+            
         }.toolbarBackground(Color("bgColor"),for: .navigationBar)
-            
-            
+        
+        
     }
 }
 
@@ -463,14 +457,14 @@ struct Abnormal_Sugar_Level: View {
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
-                
+                    
                 }
                 Group{
                     Text("1.Type 2 diabetes:")
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight: .bold))
                         .padding(.leading,10)
-                   
+                    
                     Text("Type 2 diabetes is the most common form of diabetes. Type 2 diabetes has historically been diagnosed primarily in adults. But adolescents and young adults are developing Type 2 diabetes at an alarming rate because of family history and higher rates of obesity and physical inactivity — risk factors for Type 2 diabetes, In Type 2 diabetes, glucose builds up in the blood instead of going into cells\nThis type of diabetes can occur when:\n•The body develops “insulin resistance” and can’t efficiently use the insulin it makes.\n•The pancreas gradually loses its capacity to produce insulin.\nType 2 diabetes may be delayed or controlled with diet and exercise.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
@@ -596,7 +590,7 @@ struct Stroke: View {
                         .font(.system(size:20))
                         .padding(.leading,10)
                 }
-               
+                
             }.padding(.leading,20)
         }.toolbarBackground(Color("bgColor"),for: .navigationBar)
     }
@@ -657,7 +651,7 @@ struct NoseBleeds: View {
                         .padding(.leading,20)
                     
                 }
-               
+                
             }.padding(.leading,20)
         }.toolbarBackground(Color("bgColor"),for: .navigationBar)
     }
@@ -694,7 +688,7 @@ struct CPR: View {
                         .font(.system(size: 22,weight: .bold))
                         .foregroundColor(.white)
                         .padding(.bottom, 10)
-
+                    
                     Text("1.Diseases,heart problems,heart attack.\n2.Diseases,respiratory problems.\n3.Electric shock.\n4.Poisoning.\n5.Drowning,choking.\n6.Cardiac arrest.\n7.Acute bleeding,or severe trauma.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
@@ -704,14 +698,14 @@ struct CPR: View {
                         .font(.system(size: 22,weight: .bold))
                         .foregroundColor(.white)
                         .padding(.bottom, 10)
-
+                    
                     Text("1.Make sure you are in a safe position if you approach the patient, beware that you yourself become infected.\n2.Try to see if the patient is able to respond or not, and try to wake him up by shrugging and calling him loud and close to his ears.\n3.Ask for help from those around you or from passage. Ask for help even if you don't see anyone near you. If someone responds to a request for help, I ask them to wait near you until you assess the patient condition.\n4.Put the patient on the ground or hard surface and remove any pillows under his head. Be careful if you are dealing with an injured person who has lost consciousness after hitting something.\n5.Make sure the respiratory stream is open, use a head tilt method and chin lift, follow the following steps:")
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,10)
                     
                     
-
+                    
                     Text("1.Place two fingers from one of your hands under the injured person's chin and lift his head upwards.\n2.Put your other palm on the injured forehead and press down.\n3.Look inside the patient to make sure his mouth is free of any foreign object, artificial teeth.\n4.If the patient suffers from trauma or bruising, you should avoid moving his neck and try to open the respiratory tract by pressing the jaw.\n5.Check for 10 seconds whether or not the patient  is breathing in the following ways:")
                         .foregroundColor(.white)
                         .font(.system(size:18))
@@ -720,9 +714,9 @@ struct CPR: View {
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,25)
-
                     
-                
+                    
+                    
                 }
                 
                 
@@ -743,83 +737,83 @@ struct referencePage: View {
 }
 
 struct Acknowledgment: View {
-var body: some View {
-
+    var body: some View {
+        
         VStack(alignment: .leading , spacing: 4) {
             
             Text("Words cannot express our gratitude to Paramedic Specialist Mr.Nawaf Alsayed for his time and effort in assisting us with his knowledge and providing the best resources for the content of this app, Additionally, this App would not have been possible without the generous support from the Apple Developer academy and all the mentors for their invaluable patience and feedback.")
                 .padding()
             Text("We hope this app would be a great resource to learn about first aid and help in saving lives, and remember: Play like a Hero, turn into a Hero")
                 .padding()
-          
+            
         }
         .foregroundColor(.white)
-    
-}
+        
+    }
 }
 
 struct SOSNumbers: View {
-
-var body: some View {
-    ScrollView{
-        ENhead(TelephoneImage:"telephone",phoneNumber: "112", numberName: "Kingdom Emergency (without the SIM card)")
-        
-        ENhead(TelephoneImage:"telephone",phoneNumber: "911", numberName: " Unified Emergency Number")
-
-        ENhead(TelephoneImage:"telephone",phoneNumber: "997", numberName: "Ambulance")
-        
-        ENhead(TelephoneImage:"telephone",phoneNumber: "999", numberName: "Police")
-
-        ENhead(TelephoneImage:"telephone",phoneNumber: "998", numberName: "Civil Defense")
-        
-        ENhead(TelephoneImage:"telephone",phoneNumber: "993", numberName: "Traffic Accidents")
-
-        ENhead(TelephoneImage:"telephone",phoneNumber: "966", numberName: "Natural Disasters")
-      
-            }.toolbarBackground(Color("bgColor"),for: .navigationBar)
-        }
     
-        }
+    var body: some View {
+        ScrollView{
+            ENhead(TelephoneImage:"telephone",phoneNumber: "112", numberName: "Kingdom Emergency (without the SIM card)")
+            
+            ENhead(TelephoneImage:"telephone",phoneNumber: "911", numberName: " Unified Emergency Number")
+            
+            ENhead(TelephoneImage:"telephone",phoneNumber: "997", numberName: "Ambulance")
+            
+            ENhead(TelephoneImage:"telephone",phoneNumber: "999", numberName: "Police")
+            
+            ENhead(TelephoneImage:"telephone",phoneNumber: "998", numberName: "Civil Defense")
+            
+            ENhead(TelephoneImage:"telephone",phoneNumber: "993", numberName: "Traffic Accidents")
+            
+            ENhead(TelephoneImage:"telephone",phoneNumber: "966", numberName: "Natural Disasters")
+            
+        }.toolbarBackground(Color("bgColor"),for: .navigationBar)
+    }
+    
+}
 
 struct ENhead: View{
-var TelephoneImage : String
-var phoneNumber : String
-var numberName : String
-
-var body: some View{
-   
-               VStack{
-                    Text(numberName)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .font(.system(size: 20))
-                        .frame(maxWidth: .infinity, maxHeight: 55,alignment: .leading)
-                        .padding(10)
-                        .background(Color("secBGColor"))
-             
-                    VStack {
-                        Button(action: {
-                            let phone = "tel://"
-                            let phoneNumberformatted = phone + phoneNumber
-                            guard let url = URL(string: phoneNumberformatted) else { return }
-                            UIApplication.shared.open(url)
-                           
-                        }) {
-                            Image(TelephoneImage)
-                                .resizable()
-                                .frame(width:20 ,height:20)
-                                .padding()
-                            Text(phoneNumber)
-                                .font(.title)
-                                .foregroundColor(.blue)
-                         
-                        }
-                    }
-                }
-            
-        }
+    var TelephoneImage : String
+    var phoneNumber : String
+    var numberName : String
     
+    var body: some View{
+        
+        VStack{
+            Text(numberName)
+                .fontWeight(.semibold)
+                .foregroundColor(.white)
+                .font(.system(size: 20))
+                .frame(maxWidth: .infinity, maxHeight: 55,alignment: .leading)
+                .padding(10)
+                .background(Color("secBGColor"))
+            
+            VStack {
+                Button(action: {
+                    let phone = "tel://"
+                    let phoneNumberformatted = phone + phoneNumber
+                    guard let url = URL(string: phoneNumberformatted) else { return }
+                    UIApplication.shared.open(url)
+                    
+                }) {
+                    Image(TelephoneImage)
+                        .resizable()
+                        .frame(width:20 ,height:20)
+                        .padding()
+                    Text(phoneNumber)
+                        .font(.title)
+                        .foregroundColor(.blue)
+                    
+                }
+            }
         }
+        
+    }
+    
+}
 
 struct referencePage_Previews: PreviewProvider {
     static var previews: some View {
