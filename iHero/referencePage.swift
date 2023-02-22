@@ -28,6 +28,7 @@ struct ImageGrid: View {
                         ForEach(0..<images.count) { index in
                             NavigationLink(destination: FirstAidDetailView( images: self.images[index],titles: self.titles[index])) {
                                 
+                                
                                 VStack{
                                     Rectangle()
                                         .fill(Color("secBGColor"))
@@ -47,6 +48,7 @@ struct ImageGrid: View {
                                 }
                                 //                            Button(self.images){}
                                 .padding()
+                                
                             }
                         }
                         Spacer()
@@ -118,6 +120,7 @@ struct ImageGrid: View {
         }
         .navigationBarBackButtonHidden(true)
         .accentColor(.white)
+        
     }
 }
 
@@ -198,7 +201,7 @@ struct OtherDetailView: View {
     }
 }
 
-//i stopped fixing the spacing in burns struct
+
 
 struct Bleeding: View {
     var body: some View {
@@ -386,42 +389,50 @@ struct Burns: View {
                         .font(.system(size:18))
                         .padding(.leading,20)
                         .padding(.bottom,10)
-                    //i stopped here
+                   
                     Text("Wrong behaviors:")
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight: .bold))
+                        .padding(.bottom,5)
                     Text("•Don’t try to touch the bubbles from burning.\n•Do not apply any ointments or use butter or toothpaste and other treatments on burning.\n•Do not use snow directly on the burned area.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,10)
+                        .padding(.bottom,10)
                 }
                 Group{
                     Text("Second degree burns :")
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight: .bold))
+                        .padding(.bottom,5)
                     Text("Ambulatory procedures:")
                         .foregroundColor(.white)
                         .font(.system(size: 20))
                         .padding(.leading,10)
+                        .padding(.bottom,5)
                     
                     
                     Text("•Protect the injured person from damage.\n•Remove jewelry, belts and others, especially around burned areas for example neck.\n•Take the painkiller if necessary so as to relieve the pain.\n•Cover the burning area using wet bandage or cool clean cloth.\n•Cover open bubbles with dry and sterile bandage.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
+                        .padding(.bottom,10)
                     Text("Wrong behaviors:")
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight: .bold))
+                        .padding(.bottom,5)
                     Text("•Remove burnt clothes stuck on the skin.\n•Cover the burn with adhesive bandage.\n•Place large burned areas inside cold water to avoid trauma to the injured.\n•Use ice directly on the burned area.\n•Apply any ointments or use butter or toothpaste, or other treatments to burn.\n•Touch or open the bubbles resulting from burning.\n•Lay thin cotton on the affected area which may provoke skin.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,10)
+                        .padding(.bottom,10)
                 }
                 
                 Group{
                     Text("Third degree burns :")
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight: .bold))
+                        .padding(.bottom,5)
                     Text("It is one of the most serious burns where all layers of the skin are included down to fat, and muscles may be affected.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
@@ -436,15 +447,18 @@ struct Burns: View {
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
+                        .padding(.bottom,10)
                     Text("Wrong behaviors:")
                         .foregroundColor(.white)
                         .font(.system(size: 20,weight: .bold))
+                        .padding(.bottom,5)
                     Text("•Remove burnt clothes stuck on the skin.\n•Placing large burned areas inside cold water to avoid trauma (sudden reduction in body temperature).\n•Cover the burn with adhesive bandage.\n•Apply any ointments or use butter or toothpaste, or other treatments to burn.\n•Lay thin cotton on the affected area which may provoke the affected area.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,10)
                 }
             }.padding(.leading,20)
+                .frame(maxWidth: 350, maxHeight: .infinity)
         }.toolbarBackground(Color("bgColor"),for: .navigationBar)
     }
 }
@@ -584,6 +598,7 @@ struct Abnormal_Sugar_Level: View {
                         .padding(.leading,20)
                 }
             }.padding(.leading,20)
+                .frame(maxWidth: 350, maxHeight: .infinity)
         }.toolbarBackground(Color("bgColor"),for: .navigationBar)
     }
 }
@@ -602,9 +617,11 @@ struct Stroke: View {
                     Text("When a person is having a stroke, every second counts. And what you do in those critical moments can potentially help save someone’s life.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
+                        .padding(.bottom,10)
                     Text("Presuders to Do When Someone Is Having a Stroke:")
                         .foregroundColor(.white)
                         .font(.system(size: 22,weight: .bold))
+                        .padding(.bottom,5)
                     Text("1.Call 911 or 997 immediately:")
                         .foregroundColor(.white)
                         .font(.system(size:20))
@@ -613,14 +630,18 @@ struct Stroke: View {
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
+                        .padding(.bottom,10)
                     Text("2.Note the time you first see symptoms.\n3.Perform CPR, if necessary.\n4.Do not let that person go to sleep.\n5.Do not give them medication, food, or drinks:")
                         .foregroundColor(.white)
                         .font(.system(size:20))
                         .padding(.leading,10)
+                        .lineSpacing(2)
+                    
                     Text("There are two kinds of strokes:\n•Hemorrhagic stroke, caused by a ruptured blood vessel leading to brain bleeds\n•Ischemic stroke, caused by a clot leading to blockage in a blood vessel.\n80 percent of strokes are ischemic ones, but if you’re in that 20 percent and your stroke was caused by a ruptured blood vessel in the head, you don’t want to take aspirin,And you can’t tell which one it is until you get to the emergency room and you get a CAT scan.\nAspirin actually might hurt the patient more, and cause more bleeding if in fact they are having a hemorrhagic stroke, because aspirin is a blood thinner.\nTo be safe, don’t give someone who has stroke symptoms any medication.\nYou also shouldn’t give them food or drinks before the ambulance comes.\nSometimes, a stroke affects their ability to swallow. This could ultimately cause more harm to the person if they choke and develop infections or trouble breathing.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
+                        .padding(.bottom,10)
                     Text("6.Do not drive yourself to the emergency room.")
                         .foregroundColor(.white)
                         .font(.system(size:20))
@@ -628,6 +649,7 @@ struct Stroke: View {
                 }
                 
             }.padding(.leading,20)
+                .frame(maxWidth: 350, maxHeight: .infinity)
         }.toolbarBackground(Color("bgColor"),for: .navigationBar)
     }
 }
@@ -646,12 +668,15 @@ struct NoseBleeds: View {
                     Text("Introduction:")
                         .foregroundColor(.white)
                         .font(.system(size: 22,weight: .bold))
+                        .padding(.bottom,5)
                     Text("Nosebleeds are common injuries occurring among people, often caused by dry air. Nasal bleeding varies from simple, not serious, and depends on its own to severe, requiring immediate medical attention.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
+                        .padding(.bottom,10)
                     Text("Types of nose bleeds:")
                         .foregroundColor(.white)
                         .font(.system(size: 22,weight: .bold))
+                        .padding(.bottom,5)
                     Text("1.Anterior nose bleeding:")
                         .foregroundColor(.white)
                         .font(.system(size:20))
@@ -660,6 +685,7 @@ struct NoseBleeds: View {
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
+                        .padding(.bottom,10)
                 }
                 Group{
                     Text("2.Back nose bleeding:")
@@ -670,18 +696,22 @@ struct NoseBleeds: View {
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
+                        .padding(.bottom,10)
                     
-                    Text("Causes of nasal bleeding:")
+                    Text("Causes of nose bleeding:")
                         .foregroundColor(.white)
                         .font(.system(size: 22,weight: .bold))
+                        .padding(.bottom,5)
                     Text("•The inside of the nose contains many blood vessels close to the surface of the nose; So it's easy to get it.\n•Most nosebleeds are caused by cold, or dry air.\n•Nasal allergies, or cold, can cause nasal inflammation.\n•Injury to the face, or nose directly, such as: fall, or bicycle accident.\n•Nasal bleeding is rarely caused by a serious problem, such as: bleeding disorders, vascular abnormalities, or a nasal tumor.\n•Drugs, for example, when taking drugs to prevent thrombosis, such as: aspirin and warfarin, one is more likely to develop nasal bleeding, and cannot be easily stopped.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
+                        .padding(.bottom,10)
                     Text("Nosebleeds First Aid:")
                         .foregroundColor(.white)
                         .font(.system(size: 22,weight: .bold))
-                    Text("•Slightly bending forward while sitting or standing, avoiding lying down or head tilted back, as this will cause blood swallow and vomiting.\n•Holding the nose from the soft part (not the bone) in both ways, while avoiding pressure on only one side, even if the bleeding is on only one side.\n•Squeeze your nose closed for at least 5 minutes (for children) or 10 to 15 minutes (for adults). Do not release the pressure every so often to check whether the bleeding has stopped, except after the specified time has passed.\n•Cold compress or ice pack can be applied to the bridge of your nose. This may help the blood vessels constrict and slow the bleeding.\n•If you follow the steps outlined above, and your nose continues to bleed, repeat all the steps once more. Apply pressure for a total of at least 30 minutes. If you continue to bleed, seek emergency medical care")
+                        .padding(.bottom,5)
+                    Text("•Slightly bending forward while sitting or standing, avoiding lying down or head tilted back, as this will cause blood swallow and vomiting.\n•Holding the nose from the soft part (not the bone) in both ways, while avoiding pressure on only one side, even if the bleeding is on only one side.\n•Squeeze your nose closed for at least 5 minutes (for children) or 10 to 15 minutes (for adults). Do not release the pressure every so often to check whether the bleeding has stopped, except after the specified time has passed.\n•Cold compress or ice pack can be applied to the bridge of your nose. This may help the blood vessels constrict and slow the bleeding.\n•If you follow the steps outlined above, and your nose continues to bleed, repeat all the steps once more. Apply pressure for a total of at least 30 minutes. If you continue to bleed, seek emergency medical care.")
                         .foregroundColor(.white)
                         .font(.system(size:18))
                         .padding(.leading,20)
@@ -689,6 +719,7 @@ struct NoseBleeds: View {
                 }
                 
             }.padding(.leading,20)
+                .frame(maxWidth: 350, maxHeight: .infinity)
         }.toolbarBackground(Color("bgColor"),for: .navigationBar)
     }
 }
@@ -784,11 +815,14 @@ struct Acknowledgment: View {
             
             Text("Words cannot express our gratitude to Paramedic Specialist Mr.Nawaf Alsayed for his time and effort in assisting us with his knowledge and providing the best resources for the content of this app, Additionally, this App would not have been possible without the generous support from the Apple Developer academy and all the mentors for their invaluable patience and feedback.")
                 .padding()
+                .font(.system(size:20))
             Text("We hope this app would be a great resource to learn about first aid and help in saving lives, and remember: Play like a Hero, turn into a Hero")
                 .padding()
+                .font(.system(size:20))
             
         }
         .foregroundColor(.white)
+        .frame(maxWidth: 350, maxHeight: .infinity)
         
     }
 }
